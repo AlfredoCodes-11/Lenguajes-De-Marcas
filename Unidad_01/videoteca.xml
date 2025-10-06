@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE videoteca SYSTEM "videoteca.dtd">
+<videoteca>
+    <pelicula>
+        <titulo>Mar adentro</titulo>
+        <director>Améndabar</director>
+        <Año>2004</Año>
+    </pelicula>
+    <pelicula>
+        <titulo>Jumanji</titulo>
+        <director>Jake Kasdan</director>
+        <Año>1995</Año>
+    </pelicula>
+    <pelicula>
+        <titulo>Matrix</titulo>
+        <director>Lana Wachowski</director>
+        <Año>1999</Año>
+    </pelicula>
+</videoteca>

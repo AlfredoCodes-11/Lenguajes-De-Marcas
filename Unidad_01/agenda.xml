@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agenda xmlns:listado="www.mipagina.es">
+    <listado:contactos>
+        <listado:nombre>Cristian Robles</listado:nombre>
+        <listado:telefono>654156145</listado:telefono>
+        <listado:direccion>Avenida Andalucia 3</listado:direccion>
+    </listado:contactos>
+    <listado:contactos>
+        <listado:nombre>Francisco Jimenez</listado:nombre>
+        <listado:telefono>635435557</listado:telefono>
+        <listado:direccion>Calle José I</listado:direccion>
+    </listado:contactos>
+</agenda>

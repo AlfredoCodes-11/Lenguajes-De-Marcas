@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogo xmlns:dc="http://purl.org/dc/elements/1.1">
+    <libro>
+        <dc:title>El último secreto</dc:title>
+        <dc:creator>Dan Brown</dc:creator>
+        <fecha>10 septiembre 2025</fecha>
+    </libro>
+
+    <libro>
+        <dc:title>Las que no duermen NASH</dc:title>
+        <dc:creator>Dolores Redondo</dc:creator>
+        <fecha>13 noviembre 2024</fecha>
+    </libro>
+</catalogo>

@@ -1,0 +1,5 @@
+<!ELEMENT videoteca (pelicula+)>
+<!ELEMENT pelicula (titulo,director,Año)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT director (#PCDATA)>
+<!ELEMENT Año (#PCDATA)>

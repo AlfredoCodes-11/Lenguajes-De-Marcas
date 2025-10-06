@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:h="https://www.w3.org/html"
+      xmlns:mueble="https://www.mipagina.com/mueble">
+    <!-- tabla de HTML -->
+    <h:table>
+        <tr>
+            <h:td>Manzanas</h:td>
+            <h:td>Plátanos</h:td>
+        </tr>
+    </h:table>
+
+    <!-- tabla de mueble -->
+    <mueble:table>
+        <mueble:name>IKEA Frögen</mueble:name>
+        <mueble:width unidad="cm">80</mueble:width>
+        <mueble:length unidad="cm">120</mueble:length>
+    </mueble:table>
+</root>
