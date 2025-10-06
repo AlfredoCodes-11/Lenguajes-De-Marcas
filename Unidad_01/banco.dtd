@@ -1,5 +1,6 @@
-<!ELEMENT banco (sucursal+)>
+<!ELEMENT banco (sucursal+)> <!-- el + es porque hay mas de una sucursal-->
 <!ELEMENT sucursal (cuentas+)>
+<!-- ATTLIST nom_etiqueta nom_atributo type opcion-->
 <!ATTLIST sucursal id NMTOKEN #REQUIRED>
 <!ELEMENT cuentas (cliente+)>
 <!ATTLIST cuentas id NMTOKEN #REQUIRED>
