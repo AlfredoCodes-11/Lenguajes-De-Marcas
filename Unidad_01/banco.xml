@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE banco SYSTEM "banco.dtd">
+<banco>
+        <sucursal id="S001">
+            <cuentas id="C001S1">
+                <cliente dni="6544545J">
+                    <nombre>Javier López</nombre>
+                    <telefono>65456456</telefono>
+                </cliente>
+                <cliente dni="65444545G">
+                    <nombre>Sara González</nombre>
+                    <telefono>65456454</telefono>
+                </cliente>
+            </cuentas>
+            <cuentas id="C002S1">
+                <cliente dni="6544543D">
+                    <nombre>Sergio Páez</nombre>
+                    <telefono>65456463</telefono>
+                </cliente>
+            </cuentas>
+        </sucursal>
+        <sucursal id="S002">
+            <cuentas id="C001S2">
+                <cliente id="56546434D">
+                    <nombre>Natalia Muñoz</nombre>
+                    <telefono>65464747</telefono>
+                </cliente>
+            </cuentas>
+        </sucursal>
+    </banco>

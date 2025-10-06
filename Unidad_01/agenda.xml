@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<agenda xmlns:listado="www.mipagina.es">
-    <listado:contactos>
-        <listado:nombre>Cristian Robles</listado:nombre>
-        <listado:telefono>654156145</listado:telefono>
-        <listado:direccion>Avenida Andalucia 3</listado:direccion>
-    </listado:contactos>
-    <listado:contactos>
-        <listado:nombre>Francisco Jimenez</listado:nombre>
-        <listado:telefono>635435557</listado:telefono>
-        <listado:direccion>Calle José I</listado:direccion>
-    </listado:contactos>
+<agenda xmlns:ubi="www.mipagina.es/ubi">
+    <contactos id="1">
+        <nombre>Cristian Robles</nombre>
+        <telefono>654156145</telefono>
+        <ubi:direccion>
+            <calle>Calle 133</calle>
+            <localidad>Málaga</localidad>
+            <cp>29560</cp>
+        </ubi:direccion>
+    </contactos>
+    <contactos id="2">
+        <nombre>Francisco Jimenez</nombre>
+        <telefono>635435557</telefono>
+        <ubi:direccion>
+            <calle>Calle 122</calle>
+            <localidad>Cádiz</localidad>
+            <cp>22759</cp>
+        </ubi:direccion>
+    </contactos>
 </agenda>
