@@ -3,10 +3,10 @@
       xmlns:mueble="https://www.mipagina.com/mueble">
     <!-- tabla de HTML -->
     <h:table>
-        <tr>
+        <h:tr>
             <h:td>Manzanas</h:td>
             <h:td>Plátanos</h:td>
-        </tr>
+        </h:tr>
     </h:table>
 
     <!-- tabla de mueble -->
