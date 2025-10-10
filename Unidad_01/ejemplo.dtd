@@ -1,0 +1,8 @@
+<!ELEMENT empresa (cliente+)>
+<!ELEMENT cliente (nombre,dni,direccion)>
+<!ELEMENT nombre (#PCDATA)>
+<!ATTLIST nombre id NMTOKEN #REQUIRED>
+<!ELEMENT dni (#PCDATA)>
+<!ELEMENT direccion (calle,cp)>
+<!ELEMENT calle (#PCDATA)>
+<!ELEMENT cp (#PCDATA)>

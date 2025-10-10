@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE empresa SYSTEM "ejemplo.dtd">
+<empresa xmlns:ubi="www.mipagina.es/ubi">
+    <cliente>
+        <nombre id="001">Alfredo codes Sánchez</nombre>
+        <dni>654654654M</dni>
+        <ubi:direccion>
+            <calle>cnsdknfskld</calle>
+            <cp>34535</cp>
+        </ubi:direccion>
+    </cliente>
+    <cliente>
+        <nombre id="002">dfsadfasgasg</nombre>
+        <dni>987868968J</dni>
+        <ubi:direccion>
+            <calle>cngdgfskld</calle>
+            <cp>342325</cp>
+        </ubi:direccion>
+    </cliente>
+</empresa>
