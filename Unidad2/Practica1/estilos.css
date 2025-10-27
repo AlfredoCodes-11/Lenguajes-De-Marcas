@@ -23,24 +23,58 @@ body {
     min-height: 100vh;      /* Altura total del viewport */
 }
 
-/* Cabecera centrada y con espacio de relleno (padding)*/
+/* Cabecera con FLEX*/
 .cabecera {
     text-align: center;
     padding: 1rem;      /* 1 rem = 16 px */
+    display: flex;
+    justify-content:space-between;      /* Separa brand y menú */
+    align-items: center;            /* Centrar verticalmente*/
+    background: #2c3e50;
+}
+
+/* Tamaño del logo */
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+/*  Menú con FLEX */
+.menu {
+    list-style: none;   /* Eliminamos las viñetas */
+    display: flex;      /* Colocamos en línea los enlaces */
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos básicos de los enlaces del menú */
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Efecto hover para los enlaces (pseudoclase) */
+.menu a:hover {
+    color: #e74c3c;
 }
 
 /* Título de la cabecera sin márgenes extra y color destacado */
-.titulo {
+/*.titulo {
     margin: 0;
     color: #2C3E50;
-}
+}*/
 
 /* Zona principal (main)
     padding -> espacio interior o relleno
 */
 #contenido-principal {
     padding: 1rem;
-    flex-grow: 1;   
+    flex-grow: 1;           /* Esto empuja el footer hacia abajo */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 /* Clase "tarjeta": usada para guarda secciones visualmente
