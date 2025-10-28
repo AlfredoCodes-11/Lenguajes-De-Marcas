@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.titulo {
+    margin: 0;
+    text-align: center;
+}
+
+#contenido-principal {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 500px;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    padding: 2rem;
+    flex-grow: 1;
+}
+
+.titulo {
+    font-family: 'Georgia', serif;
+    color: #2c3e50;
+}
+
+.banda {
+    font-family: 'Georgia', serif;
+    color: #2c3e50;
+}
+
+.exitos {
+    font-family: 'Georgia', serif;
+    color: #2c3e50;
+}
+
+.foto {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.lista {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.tabla {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    margin: auto;
+}
+
+.tabla, .tabla th, .tabla td{
+    border: 1px solid #ddd;
+}
+
+.tabla th {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.tabla td {
+    padding: 10px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.enlace-web a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enlace-web a:hover {
+    color: #c0392b;
+}
+
+.pie {
+    color: #7f8c8d;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
