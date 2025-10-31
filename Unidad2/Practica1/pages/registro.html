@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Registro</title>
+</head>
+<body>
+    <main>
+        <section class="tarjeta">
+            <h2>Registro de usuario</h2>
+            <form action="registro.php" method="post">
+
+                <!-- Campo de texto -->
+                <label for="name">Nombre de usuario:</label>
+                <input type="text" name="nombre" id="name" required>
+
+                <!-- Campo de email -->
+                <label for="email">Email:</label>
+                <input type="text" name="correo" id="email" placeholder="correo@example.com" required>
+            
+                <!-- Campo de tipo password -->
+                <label for="pass">Contraseña:</label>
+                <input type="password" name="clave" id="pass" minlength="6" maxlength="12" required>
+
+                <!-- Campo de tipo texto con patrón -->
+                <label for="id">DNI/NIE:</label>
+                <input type="text" name="documento-id" id="id" pattern="([X-Zx-z][0-9]{7}|[0-9]{8})[A-Za-z]" required>
+
+                <!-- Campo de tipo numérico -->
+                <label for="age">Edad</label>
+                <input type="number" name="edad" id="age" min="0">
+
+                <button type="submit">Registrar</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

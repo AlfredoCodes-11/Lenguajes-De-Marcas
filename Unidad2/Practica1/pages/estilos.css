@@ -1,0 +1,153 @@
+/* Modelo de caja universal */
+* {
+    box-sizing: border-box;
+}
+/* Altura completa del documento*/
+html, body {
+    height: 100%;
+}
+
+/*
+Configuración general:
+-Quitamos los márgenes por defecto
+-Elegimos tipografía y base
+-Definimos color de texto y fondo*/
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#333;
+    background: #f0f0f0;
+    display: flex;      /* Contenedor flexible */
+    flex-direction: column;     /* Disposición vertical de los 3 elementos */
+    min-height: 100vh;      /* Altura total del viewport */
+}
+
+/* Cabecera con FLEX*/
+.cabecera {
+    text-align: center;
+    padding: 1rem;      /* 1 rem = 16 px */
+    display: flex;
+    justify-content:space-between;      /* Separa brand y menú */
+    align-items: center;            /* Centrar verticalmente*/
+    background: #2c3e50;
+}
+
+/* Tamaño del logo */
+.logo {
+    height: 100px;
+    width: auto;
+}
+
+/*  Menú con FLEX */
+.menu {
+    list-style: none;   /* Eliminamos las viñetas */
+    display: flex;      /* Colocamos en línea los enlaces */
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos básicos de los enlaces del menú */
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Efecto hover para los enlaces (pseudoclase) */
+.menu a:hover {
+    color: #e74c3c;
+}
+
+/* Título de la cabecera sin márgenes extra y color destacado */
+/*.titulo {
+    margin: 0;
+    color: #2C3E50;
+}*/
+
+/* Zona principal (main)
+    padding -> espacio interior o relleno
+*/
+#contenido-principal {
+    padding: 1rem;
+    flex-grow: 1;           /* Esto empuja el footer hacia abajo */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Clase "tarjeta": usada para guarda secciones visualmente
+    -color blanco
+    -border sutil y redondeado
+    -sombra ligera
+    -ancho máxima controlado
+*/
+.tarjeta {
+    background: #fff;
+    border-radius: 12px;
+    width: min(900px, 95%);
+    margin: 1.5rem auto;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Texto secundario */
+.aviso {
+    color:#7F8C8D;
+}
+
+/* Listas en dos columnas flexibles (FLEX)*/
+.listas {
+    display: flex;  /* Convierto al elemento como contenedor flexible */
+    flex-direction: row;
+    gap: 2rem;
+}
+
+/* Ajustes visuales de las listas */
+.lista {
+    padding-left: 20px;     /* Espacio para las viñetas o número*/
+}
+
+.lista li {
+    margin: 0.5rem 0;       /* Añado espacio vertical entre los elementos de la lista */
+}
+
+/* Estiramos las tablas */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+/* Border y rellelno a las celdas */
+.tabla th, .tabla td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.tabla th {
+    background: #2C3E50;
+    color: #fff;
+    text-align: center;
+}
+
+.tabla td {
+    text-align: center;
+    white-space: nowrap;        /* Evita saltos de línea en celdas */
+}
+
+/* Estilo del pie de página:
+    - color gris suave
+    - tamaño de letra menor
+    - fondo ligeramente gris
+*/
+
+.pie {
+    text-align: center;
+    padding: 1rem;
+    color: #7f8c8d;
+    background: #38707e;
+    font-size: 14px;
+}
