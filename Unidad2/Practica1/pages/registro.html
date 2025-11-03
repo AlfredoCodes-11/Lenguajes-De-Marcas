@@ -3,38 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
+    <meta name="description" content="Portal de videojuegos">
+    <link rel="stylesheet" href="../estilos.css">
     <title>Registro</title>
 </head>
 <body>
-    <main>
+    <header class="cabecera">
+        <div class="brand">
+            <img src="../imagenes/gamezone-logo.png" alt="Logo de GameZone" class="logo">
+        </div>
+        <h1 class="titulo"></h1>
+        <nav class="navegacion">
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="egistro.html">Registrar</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Guías</a></li>
+                <li><a href="contacto.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="contenido-principal">
         <section class="tarjeta">
             <h2>Registro de usuario</h2>
             <form action="registro.php" method="post">
+                <!-- Fieldset: agrupar campos -->
+                <fieldset>
+                    <!-- Legend añade una leyeda al fieldset -->
+                    <legend>Datos de usuario</legend>
+                    <!-- Campo de texto -->
+                    <label for="name">Nombre de usuario:</label>
+                    <input type="text" name="nombre" id="name" required>
 
-                <!-- Campo de texto -->
-                <label for="name">Nombre de usuario:</label>
-                <input type="text" name="nombre" id="name" required>
+                    <!-- Campo de email -->
+                    <label for="email">Email:</label>
+                    <input type="text" name="correo" id="email" placeholder="correo@example.com" required>
+                </fieldset>
+                <fieldset>
 
-                <!-- Campo de email -->
-                <label for="email">Email:</label>
-                <input type="text" name="correo" id="email" placeholder="correo@example.com" required>
-            
-                <!-- Campo de tipo password -->
-                <label for="pass">Contraseña:</label>
-                <input type="password" name="clave" id="pass" minlength="6" maxlength="12" required>
+                    <legend>Otros datos</legend>
+                    <!-- Campo de tipo password -->
+                    <label for="pass">Contraseña:</label>
+                    <input type="password" name="clave" id="pass" minlength="6" maxlength="12" required>
 
-                <!-- Campo de tipo texto con patrón -->
-                <label for="id">DNI/NIE:</label>
-                <input type="text" name="documento-id" id="id" pattern="([X-Zx-z][0-9]{7}|[0-9]{8})[A-Za-z]" required>
+                    <!-- Campo de tipo texto con patrón -->
+                    <label for="id">DNI/NIE:</label>
+                    <input type="text" name="documento-id" id="id" pattern="([X-Zx-z][0-9]{7}|[0-9]{8})[A-Za-z]" required>
 
-                <!-- Campo de tipo numérico -->
-                <label for="age">Edad</label>
-                <input type="number" name="edad" id="age" min="0">
-
+                    <!-- Campo de tipo numérico -->
+                    <label for="age">Edad</label>
+                    <input type="number" name="edad" id="age" min="0">
+                </fieldset>
                 <button type="submit">Registrar</button>
             </form>
         </section>
     </main>
+    <footer class="pie">
+        <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
