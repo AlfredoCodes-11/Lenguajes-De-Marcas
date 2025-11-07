@@ -15,7 +15,7 @@
         <h1 class="titulo"></h1>
         <nav class="navegacion">
             <ul class="menu">
-                <li><a href="#">Inicio</a></li>
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="egistro.html">Registrar</a></li>
                 <li><a href="#">Noticias</a></li>
                 <li><a href="#">Guías</a></li>
@@ -26,35 +26,52 @@
     <main id="contenido-principal">
         <section class="tarjeta">
             <h2>Registro de usuario</h2>
-            <form action="registro.php" method="post">
+            <form action="registro.php" method="post" class="form-registro">
                 <!-- Fieldset: agrupar campos -->
                 <fieldset>
                     <!-- Legend añade una leyeda al fieldset -->
                     <legend>Datos de usuario</legend>
+
                     <!-- Campo de texto -->
-                    <label for="name">Nombre de usuario:</label>
-                    <input type="text" name="nombre" id="name" required>
+                    <div class="form-row">
+                        <label for="name">Nombre de usuario:</label>
+                        <input type="text" name="nombre" id="name" required>
+                    </div>
+                    
+                    
+                    <!-- Campo de tipo password -->
+                    <div class="form-row">
+                        <label for="pass">Contraseña:</label>
+                        <input type="password" name="clave" id="pass" minlength="6" maxlength="12" required>
+                    </div>
+
 
                     <!-- Campo de email -->
-                    <label for="email">Email:</label>
-                    <input type="text" name="correo" id="email" placeholder="correo@example.com" required>
-                </fieldset>
-                <fieldset>
-
-                    <legend>Otros datos</legend>
-                    <!-- Campo de tipo password -->
-                    <label for="pass">Contraseña:</label>
-                    <input type="password" name="clave" id="pass" minlength="6" maxlength="12" required>
+                    <div class="form-row">
+                        <label for="email">Email:</label>
+                        <input type="text" name="correo" id="email" placeholder="correo@example.com" required>
+                    </div>
+                    
+        
 
                     <!-- Campo de tipo texto con patrón -->
-                    <label for="id">DNI/NIE:</label>
-                    <input type="text" name="documento-id" id="id" pattern="([X-Zx-z][0-9]{7}|[0-9]{8})[A-Za-z]" required>
+                    <div class="form-row">
+                        <label for="id">DNI/NIE:</label>
+                        <input type="text" name="documento-id" id="id" pattern="([X-Zx-z][0-9]{7}|[0-9]{8})[A-Za-z]" required>
+                    </div>
+                    
 
                     <!-- Campo de tipo numérico -->
-                    <label for="age">Edad</label>
-                    <input type="number" name="edad" id="age" min="0">
+                    <div class="form-row">
+                        <label for="age">Edad</label>
+                        <input type="number" name="edad" id="age" min="0">
+                    </div>
+
+                    <!-- Botonera -->
+                    <div class="form-row botones">
+                        <button type="submit">Registrar</button>
+                    </div>
                 </fieldset>
-                <button type="submit">Registrar</button>
             </form>
         </section>
     </main>
