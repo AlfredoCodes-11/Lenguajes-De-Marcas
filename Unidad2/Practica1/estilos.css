@@ -150,7 +150,7 @@ body {
     border: 4px solid darkgoldenrod;
     border-radius: 7px;
     padding: 1rem;
-    width: 380px ; 
+    width: 400px ; 
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -182,6 +182,33 @@ body {
     background-color: darkred;
 }
 
+
+.form-contacto {
+    background-color: #fff;
+    border: 4px solid darkgoldenrod;
+    border-radius: 7px;
+    padding: 1rem;
+    width: 380px ; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: firebrick;
+    margin: 0 auto;
+}
+
+.form-row input {
+    background-color: firebrick;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.form-row input:hover {
+    background-color: darkred;
+}
+
 .pie {
     text-align: center;
     padding: 1rem;
@@ -189,3 +216,42 @@ body {
     background: #38707e;
     font-size: 14px;
 }
+
+/* ==========================
+    SECCION TIENDA
+   ==========================
+*/
+
+.tarjeta.tienda {
+    width: min(1200px,95%);
+}
+
+/* Contenedor de las cards */
+.lista-cards--flex {
+    display: flex;              /*Activa el modelo flex*/
+    flex-wrap: wrap;            /* Permite que las cards salten de línea su ni caben*/
+    gap: 16px;                  /* Espacio uniforme entre las cards*/
+    justify-content: center;    /*Centra horizontalmente todas las cards*/
+}
+
+/* Card individual */
+.card {
+    width: 280px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    text-align: center;
+    padding: 12px;
+}
+
+/* Imagen dentro de la card */
+.card-imagen {              /* Ocupa todo el ancho disponible dentro de la card */
+    width: 100%;            /* Altura fija para todas las imágenes */
+    height: 180px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    object-fit: contain;
+}
+

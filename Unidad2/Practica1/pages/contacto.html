@@ -20,56 +20,70 @@
                 <li><a href="#">Noticias</a></li>
                 <li><a href="#">Guías</a></li>
                 <li><a href="contacto.html">Contactos</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
             </ul>
         </nav>
     </header>
     <main id="contenido-principal">
         <section class="intro tarjeta">
             <h2>Contacto</h2>
-            <form action="contacto.html" method="post">
+            <form action="contacto.html" method="post" class="form-contacto">
+                <fieldset>
 
                 <!-- Lista desplegable -->
-                <label for="genero">Genero de juego favorito</label>
-                <select name="genero" id="genero">
-                    <option disabled selected>-Selecciona una opción-</option>
-                    <option value="rol">Rol</option>
-                    <option value="aventura">Aventura</option>
-                    <option value="deportes">Deportes</option>
-                </select>
+                <div class="form-row">
+                    <label for="genero">Genero de juego favorito</label>
+                    <select name="genero" id="genero">
+                        <option disabled selected>-Selecciona una opción-</option>
+                        <option value="rol">Rol</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="deportes">Deportes</option>
+                    </select>
+                </div>
 
                  <!-- Campo de tipo radio -->
-                <p>Elige tu plataforma:</p>
-                <input type="radio" name="plataforma" id="pc" value="pc">
-                <label for="pc">PC</label>
+                 <div class="form-row">
+                    <p>Elige tu plataforma:</p>
+                    <input type="radio" name="plataforma" id="pc" value="pc">
+                    <label for="pc">PC</label>
 
-                <input type="radio" name="plataforma" id="nintendo" value="nintendo">
-                <label for="nintendo">Nintendo</label>
+                    <input type="radio" name="plataforma" id="nintendo" value="nintendo">
+                    <label for="nintendo">Nintendo</label>
 
-                <input type="radio" name="plataforma" id="ps5" value="ps5">
-                <label for="ps5">PS5</label>
+                    <input type="radio" name="plataforma" id="ps5" value="ps5">
+                    <label for="ps5">PS5</label>
+                </div>
 
                 <!-- Campo de tipo checkbox -->
-                <p>Plataforma:</p>
-                <input type="checkbox" name="dificultad" id="dificultad" value="facil">
-                <label for="dificultad">Fácil</label>
+                <div class="form-row">
+                    <p>Plataforma:</p>
+                    <input type="checkbox" name="dificultad" id="dificultad" value="facil">
+                    <label for="dificultad">Fácil</label>
 
-                <input type="checkbox" name="dificultad" id="dificultad" value="medio">
-                <label for="dificultad">Medio</label>
+                    <input type="checkbox" name="dificultad" id="dificultad" value="medio">
+                    <label for="dificultad">Medio</label>
 
-                <input type="checkbox" name="dificultad" id="dificultad" value="dificil">
-                <label for="dificultad">Difícil</label>
+                    <input type="checkbox" name="dificultad" id="dificultad" value="dificil">
+                    <label for="dificultad">Difícil</label>
+                </div>
 
                 <!-- Checkbox sin value -->
-                <br>
-                <label for="suscripcion">Suscribirse a noticias:</label>
-                <input type="checkbox" name="suscripcion" id="suscripcion" checked>
+                <div class="form-row">
+                    <br>
+                    <label for="suscripcion">Suscribirse a noticias:</label>
+                    <input type="checkbox" name="suscripcion" id="suscripcion" checked>
+                </div>
 
-                <!-- Campo oculto -->
-                <input type="hidden" name="producto-id" value="1234">
+                    <!-- Campo oculto -->
+                <div class="form-row botones">
+                    <input type="hidden" name="producto-id" value="1234">
 
-                <br>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Limpiar">
+                    <br>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpiar">
+                </div>
+                </div>
+            </fieldset>
             </form>
         </section>
     </main>
