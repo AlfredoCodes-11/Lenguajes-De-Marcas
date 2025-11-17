@@ -294,22 +294,37 @@ body {
 */
 
 
-.contenedor-grid :nth-child(1) {background-color: aquamarine;}
-.contenedor-grid :nth-child(2) {background-color: #e74c3c;}
-.contenedor-grid :nth-child(3) {background-color: greenyellow;}
-.contenedor-grid :nth-child(4) {background-color: purple;}
-.contenedor-grid :nth-child(5) {background-color: goldenrod;}
-.contenedor-grid :nth-child(6) {background-color: blue;}
+.contenedor-grid > :nth-child(1) {background-color: aquamarine;}
+.contenedor-grid > :nth-child(2) {background-color: #e74c3c;}
+.contenedor-grid > :nth-child(3) {background-color: greenyellow;}
+.contenedor-grid > :nth-child(4) {background-color: purple;}
+.contenedor-grid > :nth-child(5) {background-color: goldenrod;}
+.contenedor-grid > :nth-child(6) {background-color: blue;}
 
 .contenedor-grid {
     display: grid;          /* Activamos grid */
     /*grid-template-columns: 200px 200px 200px; */
-    grid-template-columns: repeat(4, 150px);        /* 3 columnas exactas */
-    grid-template-rows: 100px 100px;                /* 2 filas exactas */
-    gap: 10px;                                      /* espacio uniforme entre filas y columnas */
-    justify-content: center;
+    /*grid-template-columns: repeat(3, 150px);        /* 3 columnas exactas */
+   /*grid-template-rows: 100px 100px;*/                /* 2 filas exactas */
+    /*gap: 5px 25px;*/                                      /* espacio uniforme entre filas y columnas */
+    /*justify-content: center;*/
     background-color: #eaeaea;
     padding: 10px;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: 75px 125px;
+    min-height: 300px;
+    gap: 20px;
+
+    /* Alineación de los elementos de cada celda */
+    justify-items: stretch;
+    align-items: stretch;
+    /* Atajo: place-items = aling-items + justify-items */
+    /*place-items: start center;*/
+
+    /* Alineación de la cuadrícula respecto del contenerdor grid */
+    /*justify-content:center ;
+    align-content: center;*/
+    place-content: center;
 }
 
 .item-grid {
@@ -317,4 +332,16 @@ body {
     font-weight: bold;
     border: 2px solid #60a3bc;
     font-size: 1.2rem;
+}
+
+.item-1 {
+    /* Alineación del elemento dentro de su celda */
+    /*justify-self: center;
+    align-self: center;*/
+    place-self: center;
+    order: 1;
+}
+
+.item-3 {
+    order: -4;
 }
