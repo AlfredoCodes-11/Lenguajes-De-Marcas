@@ -345,3 +345,59 @@ body {
 .item-3 {
     order: -4;
 }
+
+.lista-cards--grid {
+    display: grid;
+    /*grid-template-columns: repeat(4, 1fr);*/
+    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    /*
+    - minmax(280px, 1fr):display:
+        Cada card mide como mínimo 280px de ancho,
+        pero puede crecer hasta ocupar una fracción del espacio (1fr).
+    - auto-fill:;
+        Intenta "rellenar" la fila con tantas columnas como quepan.
+        Si sobran huecos, los reserva (aunque queden vacíos).
+    -auto-fill vs auto-fit:
+        auto-fill: intenta llenar filas con columnas, incluso reservando huecos.
+        auto-fit: colapsa huecos y deja que las cards se ensanchen. */
+    gap: 16px;
+}
+
+/* GRID POR AREAS */
+.contenedor-areas {
+    display: grid;
+    min-height: 400px;
+    grid-template-columns: 1px 4fr 2fr;
+    grid-template-rows: 80px 1fr 60px;
+    gap: 16px;
+
+    grid-template-areas: 
+        "cabecera    cabecera    cabecera"
+        "menu        principal   ads"
+        "pie         pie         pie";
+}
+
+.area-header {
+    grid-area: cabecera;
+    background-color: #e74c3c;
+}
+
+.area-menu {
+    grid-area: menu;
+    background-color: greenyellow;
+}
+
+.area-main {
+    grid-area: principal;
+    background-color: aquamarine;
+}
+
+.area-aside {
+    grid-area: ads;
+    background-color: plum;
+}
+
+.area-footer {
+    grid-area: pie;
+    background-color: burlywood;
+}
