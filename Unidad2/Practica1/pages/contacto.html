@@ -18,74 +18,95 @@
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="registro.html">Registrar</a></li>
                 <li><a href="#">Noticias</a></li>
-                <li><a href="#">Guías</a></li>
+                <li><a href="guias.html">Guías</a></li>
                 <li><a href="contacto.html">Contactos</a></li>
                 <li><a href="tienda.html">Tienda</a></li>
             </ul>
         </nav>
     </header>
     <main id="contenido-principal">
-        <section class="intro tarjeta">
-            <h2>Contacto</h2>
-            <form action="contacto.html" method="post" class="form-contacto">
+        <main id="contenido-principal">
+            <section class="contacto tarjeta">
+              <h2>Formulario de contacto</h2>
+              <p>¿Tienes alguna duda o sugerencia? Escríbenos y te responderemos lo antes posible.</p>
+        
+              <form action="enviar_contacto.php" method="post" class="form-contacto" autocomplete="off">  
                 <fieldset>
-
-                <!-- Lista desplegable -->
-                <div class="form-row">
-                    <label for="genero">Genero de juego favorito</label>
-                    <select name="genero" id="genero">
-                        <option disabled selected>-Selecciona una opción-</option>
-                        <option value="rol">Rol</option>
-                        <option value="aventura">Aventura</option>
-                        <option value="deportes">Deportes</option>
+                  <legend>Datos del mensaje</legend>
+        
+                  <!-- Nombre -->
+                  <div class="form-row">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                  </div>
+        
+                  <!-- Email -->
+                  <div class="form-row">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                  </div>
+        
+                  <!-- Motivo de contacto -->
+                  <div class="form-row">
+                    <label for="motivo">Motivo:</label>
+                    <select id="motivo" name="motivo" required>
+                      <option disabled selected>Selecciona un motivo</option>
+                      <option value="consulta">Consulta general</option>
+                      <option value="reporte">Reporte de error</option>
+                      <option value="sugerencia">Sugerencia</option>
                     </select>
-                </div>
-
-                 <!-- Campo de tipo radio -->
-                 <div class="form-row">
-                    <p>Elige tu plataforma:</p>
-                    <input type="radio" name="plataforma" id="pc" value="pc">
-                    <label for="pc">PC</label>
-
-                    <input type="radio" name="plataforma" id="nintendo" value="nintendo">
-                    <label for="nintendo">Nintendo</label>
-
-                    <input type="radio" name="plataforma" id="ps5" value="ps5">
-                    <label for="ps5">PS5</label>
-                </div>
-
-                <!-- Campo de tipo checkbox -->
-                <div class="form-row">
-                    <p>Plataforma:</p>
-                    <input type="checkbox" name="dificultad" id="dificultad" value="facil">
-                    <label for="dificultad">Fácil</label>
-
-                    <input type="checkbox" name="dificultad" id="dificultad" value="medio">
-                    <label for="dificultad">Medio</label>
-
-                    <input type="checkbox" name="dificultad" id="dificultad" value="dificil">
-                    <label for="dificultad">Difícil</label>
-                </div>
-
-                <!-- Checkbox sin value -->
-                <div class="form-row">
-                    <br>
-                    <label for="suscripcion">Suscribirse a noticias:</label>
-                    <input type="checkbox" name="suscripcion" id="suscripcion" checked>
-                </div>
-
-                    <!-- Campo oculto -->
-                <div class="form-row botones">
-                    <input type="hidden" name="producto-id" value="1234">
-
-                    <br>
+                  </div>
+        
+                  <!-- Preferencia de respuesta -->
+                  <div class="form-row">
+                    <p>¿Deseas recibir respuesta por correo?</p>
+                    <label><input type="radio" name="respuesta" value="si" checked> Sí</label>
+                    <label><input type="radio" name="respuesta" value="no"> No</label>
+                  </div>
+        
+                  <!-- Mensaje -->
+                  <div class="form-row">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+                  </div>
+        
+                  <!-- Casilla de verificación -->
+                  <div class="form-row">
+                    <label>
+                      <input type="checkbox" name="politica" required>
+                      Acepto la política de privacidad
+                    </label>
+                  </div>
+        
+                  <!-- Botones -->
+                  <div class="form-row botones">
+                    <button>Enviar alternativo</button>
                     <input type="submit" value="Enviar">
-                    <input type="reset" value="Limpiar">
+                    <input type="reset" value="Borrar formulario">
+                    <input type="button" value="Otro">
+                  </div>
+                </fieldset>
+              </form>
+            </section>
+
+            <!-- Donde estamos -->
+            <section class="contacto-ubicacion tarjeta">
+                <h2>Donde estamos</h2>
+                <p>Nos encontramos en tu centro educativo favorito. ¡Ven a visitarnos!</p>
+
+                <!-- iframe del mapa -->
+
+                <div class="mapa-contenedor">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4521.652734605179!2d-4.5518559091207775!3d36.73957814432537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f10963ce0f3d%3A0x310ae7d4bb2e8f7b!2sCPIFP%20Alan%20Turing!5e0!3m2!1ses!2ses!4v1764335585657!5m2!1ses!2ses"
+                        allowfullscreen
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
-                </div>
-            </fieldset>
-            </form>
-        </section>
+
+            </section>
+          </main>
     </main>
     <footer class="pie">
         <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>

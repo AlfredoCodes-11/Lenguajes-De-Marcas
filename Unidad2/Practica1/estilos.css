@@ -2,35 +2,36 @@
 * {
     box-sizing: border-box;
 }
-/* Altura completa del documento*/
+
+/* Altura completa del documento html */
 html, body {
     height: 100%;
 }
 
 /*
 Configuración general:
--Quitamos los márgenes por defecto
--Elegimos tipografía y base
--Definimos color de texto y fondo*/
-
+- Quitamos los márgenes por defecto
+- Elegimos una tipografía base
+- Definimos color de texto y fondo
+*/
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color:#333;
+    color: #333;
     background: #f0f0f0;
-    display: flex;      /* Contenedor flexible */
+    display: flex;              /* Contenedor flexible */
     flex-direction: column;     /* Disposición vertical de los 3 elementos */
-    min-height: 100vh;      /* Altura total del viewport */
+    min-height: 100vh;          /* Altura total del viewport*/
 }
 
-/* Cabecera con FLEX*/
+/* Cabecera con FLEX */
 .cabecera {
     text-align: center;
-    padding: 1rem;      /* 1 rem = 16 px */
+    padding: 1rem;          /* 1 rem = 16 px */
     display: flex;
-    justify-content:space-between;      /* Separa brand y menú */
-    align-items: center;            /* Centrar verticalmente*/
-    background: #2c3e50;
+    justify-content: space-between;             /* Separa brand y menú */
+    align-items: center;                        /* Centrar verticalmente */
+    background: #2C3E50;
 }
 
 /* Tamaño del logo */
@@ -39,16 +40,16 @@ body {
     width: auto;
 }
 
-/*  Menú con FLEX */
+/* Menú con FLEX */
 .menu {
     list-style: none;   /* Eliminamos las viñetas */
     display: flex;      /* Colocamos en línea los enlaces */
-    gap: 1rem;
+    gap: 1rem;          /* Separo los enlaces */
     margin: 0;
     padding: 0;
 }
 
-/* Estilos básicos de los enlaces del menú */
+/* Estilo básico de los enlaces del menú */
 .menu a {
     color: #fff;
     text-decoration: none;
@@ -61,27 +62,27 @@ body {
 }
 
 /* Título de la cabecera sin márgenes extra y color destacado */
-/*.titulo {
+/* .titulo {
     margin: 0;
     color: #2C3E50;
-}*/
+} */
 
 /* Zona principal (main)
-    padding -> espacio interior o relleno
+    padding -> espacio interior o relleno 
 */
 #contenido-principal {
     padding: 1rem;
-    flex-grow: 1;           /* Esto empuja el footer hacia abajo */
+    flex-grow: 1;       /* Esto empuja el footer hacia abajo */
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-/* Clase "tarjeta": usada para guarda secciones visualmente
-    -color blanco
-    -border sutil y redondeado
-    -sombra ligera
-    -ancho máxima controlado
+/* Clase "tarjeta": usada para agrupar secciones visualmente 
+    - color blanco
+    - border sutil y redondeado en las esquinas
+    - sombra ligera
+    - ancho máximo controlado
 */
 .tarjeta {
     background: #fff;
@@ -95,12 +96,12 @@ body {
 
 /* Texto secundario */
 .aviso {
-    color:#7F8C8D;
+    color: #7F8C8D;
 }
 
-/* Listas en dos columnas flexibles (FLEX)*/
+/* Listas en dos columnas flexibles (FLEX) */
 .listas {
-    display: flex;  /* Convierto al elemento como contenedor flexible */
+    display: flex;      /* Convierto al elemento como contenedor flexible */
     flex-direction: row;
     gap: 2rem;
 }
@@ -111,17 +112,17 @@ body {
 }
 
 .lista li {
-    margin: 0.5rem 0;       /* Añado espacio vertical entre los elementos de la lista */
+    margin: 0.5rem 0;       /* Añado espacio vertical entre los elementos de la lista */    
 }
 
-/* Estiramos las tablas */
+/* Estilamos las tablas */
 .tabla {
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
 }
 
-/* Border y rellelno a las celdas */
+/* Border y relleno a las celdas */
 .tabla th, .tabla td {
     border: 1px solid #ddd;
     padding: 10px;
@@ -134,23 +135,23 @@ body {
 }
 
 .tabla td {
-    text-align: center;
+    text-align: left;
     white-space: nowrap;        /* Evita saltos de línea en celdas */
 }
 
 /* Estilo del pie de página:
     - color gris suave
     - tamaño de letra menor
-    - fondo ligeramente gris
+    - fondo ligeramente gris 
 */
 
-/* ======= FORMULARIO DE REGISTRO =======*/
+/* ======= FORMULARIO DE REGISTRO ======= */
 .form-registro{
     background-color: #fff;
     border: 4px solid darkgoldenrod;
     border-radius: 7px;
     padding: 1rem;
-    width: 400px ; 
+    width: 380px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -158,14 +159,14 @@ body {
     margin: 0 auto;
 }
 
-.form-row{
+.form-row {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
 }
 
-.form-row label{
+.form-row label {
     font-weight: bold;
 }
 
@@ -182,79 +183,76 @@ body {
     background-color: darkred;
 }
 
-
-.form-contacto {
-    background-color: #fff;
-    border: 4px solid darkgoldenrod;
-    border-radius: 7px;
-    padding: 1rem;
-    width: 380px ; 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    color: firebrick;
-    margin: 0 auto;
-}
-
-.form-row input {
-    background-color: firebrick;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-}
-
-.form-row input:hover {
-    background-color: darkred;
-}
-
 .pie {
     text-align: center;
     padding: 1rem;
-    color: #7f8c8d;
+    color: #7F8C8D;
     background: #38707e;
     font-size: 14px;
 }
 
-/* ==========================
-    SECCION TIENDA
-   ==========================
+/* ========================
+   SECCION CONTACTO
+   ========================
+*/
+
+.contacto-ubicaion {
+    margin-top: 2rem;
+}
+
+.mapa-contenedor {
+    margin-top: 1rem;
+    margin: 0 auto;
+}
+
+.mapa-contenedor iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    /*aspect-ratio: 16 / 9;*/
+    border: 0;
+    border-radius: 8px;
+}
+
+/* ========================
+   SECCION TIENDA
+   ========================
 */
 
 .tarjeta.tienda {
-    width: min(1200px,95%);
+    width: min(1500px, 95%);
 }
 
 /* Contenedor de las cards */
 .lista-cards--flex {
-    display: flex;              /*Activa el modelo flex*/
-    flex-wrap: wrap;            /* Permite que las cards salten de línea su ni caben*/
-    gap: 16px;                  /* Espacio uniforme entre las cards*/
-    justify-content: center;    /*Centra horizontalmente todas las cards*/
+    display: flex;              /*Activa el modelo Flex */
+    flex-wrap: wrap;            /* Permite que las cards salten de línea si no cabeb */
+    gap: 16px;                  /* Espacio uniforme entre las cards */
+    justify-content: center;    /* Centra horizontalmente todas las cards */
 }
 
 /* Card individual */
 .card {
-    width: 280px;
+    width: 100%;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     background-color: #fff;
     text-align: center;
     padding: 12px;
 }
 
 /* Imagen dentro de la card */
-.card-imagen {              /* Ocupa todo el ancho disponible dentro de la card */
-    width: 100%;            /* Altura fija para todas las imágenes */
-    height: 180px;
+.card-imagen {
+    width: 100%;            /* Ocupa todo el ancho disponible dentro de la card */
+    height: 180px;          /* Altura fija para todas las imágenes */
     background-color: #f4f4f4;
     border-radius: 8px;
     margin-bottom: 8px;
     object-fit: contain;
 }
 
+/* Textos */
 .card-titulo {
     color: #333;
     font-size: 1.1rem;
@@ -264,7 +262,7 @@ body {
 .card-descripcion {
     font-size: 0.9rem;
     color: #666;
-    min-height: 8px 0;
+    min-height: 3.5em;  /* Mantiene altura uniforme aunque cambie el texto */
 }
 
 .card-precio {
@@ -282,62 +280,59 @@ body {
     border-radius: 8px;
 }
 
-/* display: inline-block;
-    Por defecto, los enlaces <a> son elementos en linea y no aceptan padding vertical real ni border radius bien definidos.
-    Con inline-block permito que se comporten como un boton real con padding, bordes redondeados y ancho ajustado al texto. */
+/* display: inline-block:
+    Por defecto, los enlaces <a> son elementos en lína y no aceptan padding vertical real ni border radius bien definidos. 
+    Con inline-block permito que se comporte como un botón real con padding, bordes redondeados y ancho ajustado al texto. */
 
 
-
-/* ==========================
-    PRÁCTICA TIENDA
-   ==========================
+/* ========================
+   PRACTICA GRID
+   ========================
 */
 
+.contenedor-grid > :nth-child(1) { background-color: aquamarine;}
+.contenedor-grid > :nth-child(2) { background-color: #e74c3c;}
+.contenedor-grid > :nth-child(3) { background-color: greenyellow ;}
+.contenedor-grid > :nth-child(4) { background-color: purple;}
+.contenedor-grid > :nth-child(5) { background-color: goldenrod;}
+.contenedor-grid > :nth-child(6) { background-color: blue;}
 
-.contenedor-grid > :nth-child(1) {background-color: aquamarine;}
-.contenedor-grid > :nth-child(2) {background-color: #e74c3c;}
-.contenedor-grid > :nth-child(3) {background-color: greenyellow;}
-.contenedor-grid > :nth-child(4) {background-color: purple;}
-.contenedor-grid > :nth-child(5) {background-color: goldenrod;}
-.contenedor-grid > :nth-child(6) {background-color: blue;}
 
 .contenedor-grid {
-    display: grid;          /* Activamos grid */
-    /*grid-template-columns: 200px 200px 200px; */
-    /*grid-template-columns: repeat(3, 150px);        /* 3 columnas exactas */
-   /*grid-template-rows: 100px 100px;*/                /* 2 filas exactas */
-    /*gap: 5px 25px;*/                                      /* espacio uniforme entre filas y columnas */
-    /*justify-content: center;*/
+    display: grid;      /* Activamos grid */
+    /* row-gap: 5px;
+    column-gap: 25px; */
+    /* gap: 5px 25px; */
+     /* espacio uniforme entre filas y columnas */
+    /* gap: 10px; */
+    /* 3 columnas exactas */
+    /* grid-template-columns: repeat(3,200px); */
+     /* 2 filas exactas */      
+    /* grid-template-rows: 100px 100px;                */
     background-color: #eaeaea;
     padding: 10px;
-    grid-template-columns: repeat(3, 100px);
+    grid-template-columns: repeat(3, 200px);
     grid-template-rows: 75px 125px;
-    min-height: 300px;
     gap: 20px;
+    min-height: 300px; 
 
-    /* Alineación de los elementos de cada celda */
+    /* Alineación de los elementos dentro de cada celda */
     justify-items: stretch;
     align-items: stretch;
-    /* Atajo: place-items = aling-items + justify-items */
-    /*place-items: start center;*/
+    /* Atajo: place-items = align-items + justify-items */
+    /* place-items: start center; */
 
-    /* Alineación de la cuadrícula respecto del contenerdor grid */
-    /*justify-content:center ;
-    align-content: center;*/
+    /* Alineación de la cuadrícula respecto del contenedor grid */
+    /* justify-content: center;
+    align-content: center; */
+    /* Atajo: place-content = align-content + justify-content */
     place-content: center;
-}
-
-.item-grid {
-    color: #000;
-    font-weight: bold;
-    border: 2px solid #60a3bc;
-    font-size: 1.2rem;
 }
 
 .item-1 {
     /* Alineación del elemento dentro de su celda */
-    /*justify-self: center;
-    align-self: center;*/
+    /* justify-self: center;
+    align-self: center; */
     place-self: center;
     order: 1;
 }
@@ -346,45 +341,61 @@ body {
     order: -4;
 }
 
-.lista-cards--grid {
+/* SECCION TIENDA GRID */
+.lista-cards--grid-fill {
     display: grid;
-    /*grid-template-columns: repeat(4, 1fr);*/
-    grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     /*
-    - minmax(280px, 1fr):display:
+    - minmax(280px, 1fr):
         Cada card mide como mínimo 280px de ancho,
         pero puede crecer hasta ocupar una fracción del espacio (1fr).
-    - auto-fill:;
+    - auto-fill:
         Intenta "rellenar" la fila con tantas columnas como quepan.
         Si sobran huecos, los reserva (aunque queden vacíos).
-    -auto-fill vs auto-fit:
+    - auto-fill vs auto-fit:
         auto-fill: intenta llenar filas con columnas, incluso reservando huecos.
-        auto-fit: colapsa huecos y deja que las cards se ensanchen. */
+        auto-fit: colapsa huecos y deja que las cards se ensanchen.
+  */
+    gap: 16px;
+}
+.lista-cards--grid-fit {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /*
+    - minmax(280px, 1fr):
+        Cada card mide como mínimo 280px de ancho,
+        pero puede crecer hasta ocupar una fracción del espacio (1fr).
+    - auto-fill:
+        Intenta "rellenar" la fila con tantas columnas como quepan.
+        Si sobran huecos, los reserva (aunque queden vacíos).
+    - auto-fill vs auto-fit:
+        auto-fill: intenta llenar filas con columnas, incluso reservando huecos.
+        auto-fit: colapsa huecos y deja que las cards se ensanchen.
+  */
     gap: 16px;
 }
 
-/* GRID POR AREAS */
+/* GRID POR ÁREAS */
 .contenedor-areas {
     display: grid;
     min-height: 400px;
-    grid-template-columns: 1px 4fr 2fr;
+    grid-template-columns: 1fr 4fr 2fr;
     grid-template-rows: 80px 1fr 60px;
     gap: 16px;
-
     grid-template-areas: 
-        "cabecera    cabecera    cabecera"
-        "menu        principal   ads"
-        "pie         pie         pie";
+        "cabecera   cabecera    cabecera"
+        "menu       principal   ads"
+        "pie        pie         pie";
 }
 
 .area-header {
-    grid-area: cabecera;
-    background-color: #e74c3c;
+    grid-area: cabecera; background-color: #e74c3c;
 }
 
 .area-menu {
-    grid-area: menu;
-    background-color: greenyellow;
+    grid-area: menu; background-color: greenyellow;
 }
 
 .area-main {
@@ -400,4 +411,83 @@ body {
 .area-footer {
     grid-area: pie;
     background-color: burlywood;
+}
+
+/* ========================
+   SECCION JUEGOS
+   ========================
+*/
+
+.tarjeta.juegos {
+    width: min(1700px, 95%);
+}
+
+/* Catálogo de juegos enfoque ESCRITORIO FIRST */
+.lista-cards--grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card-destacada {
+    /* grid-column: span 2; */
+    background-color: #82d2e5;
+    border: 2px solid red;
+}
+
+/* ========================
+   SECCION GUIAS (diferente estructura al resto)
+   ========================
+*/
+
+.guias h1 {
+    margin-top: 20;
+}
+
+.guias-videos {
+    margin-top: 2rem;
+}
+
+.guias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.guias-videos h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.guia-video iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* VERSION MOVILES */
+/* @media (width < 768px ) {}*/
+@media screen and (width < 768px){
+    .tienda.juegos {
+        width: 95%;
+    }
+
+    /* Una sola columna de juegos */
+    .lista-cards--grid {
+        grid-template-columns: minmax(220px, 1fr);
+    }
+}
+
+/* VERSION TABLET */
+/* @media (768px <= width < 1024px) {}*/
+@media screen and (768px <= width < 1024px){
+    .tienda.juegos {
+        width: min(1000px, 95%);
+    }
+
+    /* Una sola columna de juegos */
+    .lista-cards--grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
 }

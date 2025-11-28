@@ -1,34 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portal de videojuegos">
     <link rel="stylesheet" href="../estilos.css">
-    <title>Registro</title>
+    <title>GameZone - Tu portal de videojuegos</title>
 </head>
 <body>
     <header class="cabecera">
         <div class="brand">
             <img src="../imagenes/gamezone-logo.png" alt="Logo de GameZone" class="logo">
         </div>
-        <h1 class="titulo"></h1>
+        <!-- <h1 class="titulo">GameZone</h1> -->
         <nav class="navegacion">
             <ul class="menu">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="registro.html">Registrar</a></li>
                 <li><a href="#">Noticias</a></li>
-                <li><a href="#">Guías</a></li>
-                <li><a href="contacto.html">Contactos</a></li>
+                <li><a href="guias.html">Guías</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><a href="registro.html">Registro</a></li>
                 <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="juegos.html">Juegos</a></li>
             </ul>
         </nav>
     </header>
+
     <!-- CONTENIDO PRINCIPAL -->
     <main id="contenido-principal">
-        <!-- Section con DOS clases: 'tarjeta' (estilo general) y 'tienda' (estilo específico) -->
+        <!-- Section con DOS clases: 'tarjeta' (estilo global) y 'tienda' (estilo específico) -->
         <section class="tarjeta tienda">
-            <h2>Productos destacados</h2>
+            <h2>Productos destacados (con Grid y auto-fill)</h2>
+
+            <!-- Contenedor de las cards -->
+            <div class="lista-cards lista-cards--grid-fill">
+
+                <!-- Primer producto -->
+                <article class="card">
+                    <!-- Imagen -->
+                    <img src="../imagenes/mouse.png" alt="Ratón gaming RGB" class="card-imagen">
+
+                    <!-- Título del producto -->
+                    <h3 class="card-titulo">Ratón Gaming RGB</h3>
+
+                    <!-- Descripción -->
+                    <p class="card-descripcion">
+                        Ratón ergonómico con 6 botones y sensor de alta precisión.
+                    </p>
+
+                    <!-- Precio -->
+                    <p class="card-precio">19.99€</p>
+
+                    <!-- Botón -->
+                    <a href="#" class="card-boton">Añadir al carrito</a>
+                </article>
+
+                <!-- Segundo producto -->
+                <article class="card">
+                    <!-- Imagen -->
+                    <img src="../imagenes/camara.png" alt="Ratón gaming RGB" class="card-imagen">
+
+                    <!-- Título del producto -->
+                    <h3 class="card-titulo">Ratón Gaming RGB</h3>
+
+                    <!-- Descripción -->
+                    <p class="card-descripcion">
+                        Ratón ergonómico con 6 botones y sensor de alta precisión.
+                    </p>
+
+                    <!-- Precio -->
+                    <p class="card-precio">19.99€</p>
+
+                    <!-- Botón -->
+                    <a href="#" class="card-boton">Añadir al carrito</a>
+                </article>
+
+                <!-- Tercer producto -->
+                <article class="card">
+                    <!-- Imagen -->
+                    <img src="../imagenes/pendrive.png" alt="Ratón gaming RGB" class="card-imagen">
+
+                    <!-- Título del producto -->
+                    <h3 class="card-titulo">Ratón Gaming RGB</h3>
+
+                    <!-- Descripción -->
+                    <p class="card-descripcion">
+                        Ratón ergonómico con 6 botones y sensor de alta precisión.
+                    </p>
+
+                    <!-- Precio -->
+                    <p class="card-precio">19.99€</p>
+
+                    <!-- Botón -->
+                    <a href="#" class="card-boton">Añadir al carrito</a>
+                </article>
+
+                
+            </div>
+        </section>
+        <section class="tarjeta tienda">
+            <h2>Productos destacados (con Grid y auto-fit)</h2>
+
+            <!-- Contenedor de las cards -->
+            <div class="lista-cards lista-cards--grid-fit">
+
+                <!-- Primer producto -->
+                <article class="card">
+                    <!-- Imagen -->
+                    <img src="../imagenes/mouse.png" alt="Ratón gaming RGB" class="card-imagen">
+
+                    <!-- Título del producto -->
+                    <h3 class="card-titulo">Ratón Gaming RGB</h3>
+
+                    <!-- Descripción -->
+                    <p class="card-descripcion">
+                        Ratón ergonómico con 6 botones y sensor de alta precisión.
+                    </p>
+
+                    <!-- Precio -->
+                    <p class="card-precio">19.99€</p>
+
+                    <!-- Botón -->
+                    <a href="#" class="card-boton">Añadir al carrito</a>
+                </article>
+
+               
+
+                <!-- Segundo producto -->
+                <article class="card">
+                    <!-- Imagen -->
+                    <img src="../imagenes/camara.png" alt="Ratón gaming RGB" class="card-imagen">
+
+                    <!-- Título del producto -->
+                    <h3 class="card-titulo">Ratón Gaming RGB</h3>
+
+                    <!-- Descripción -->
+                    <p class="card-descripcion">
+                        Ratón ergonómico con 6 botones y sensor de alta precisión.
+                    </p>
+
+                    <!-- Precio -->
+                    <p class="card-precio">19.99€</p>
+
+                    <!-- Botón -->
+                    <a href="#" class="card-boton">Añadir al carrito</a>
+                </article>
+
+                <!-- Tercer producto -->
+                <article class="card">
+                    <!-- Imagen -->
+                    <img src="../imagenes/pendrive.png" alt="Ratón gaming RGB" class="card-imagen">
+
+                    <!-- Título del producto -->
+                    <h3 class="card-titulo">Ratón Gaming RGB</h3>
+
+                    <!-- Descripción -->
+                    <p class="card-descripcion">
+                        Ratón ergonómico con 6 botones y sensor de alta precisión.
+                    </p>
+
+                    <!-- Precio -->
+                    <p class="card-precio">19.99€</p>
+
+                    <!-- Botón -->
+                    <a href="#" class="card-boton">Añadir al carrito</a>
+                </article>
+                
+             
+            </div>
+        </section>
+
+        <!-- Layout por áreas -->
+        <section class="tarjeta practica-grid">
+            <h2>Layout por áreas</h2>
+            <div class="contenedor-areas">
+                <header class="area-header">HEADER</header>
+                <nav class="area-menu">MENU</nav>
+                <main class="area-main">MAIN</main>
+                <aside class="area-aside">ASIDE</aside>
+                <footer class="area-footer">FOOTER</footer>
+            </div>
+
+        </section>
+        
+        <section class="tarjeta practica-grid">
+            <h2>Práctica de Grid</h2>
+            <div class="contenedor-grid">
+                <div class="item-grid item-1">1</div>
+                <div class="item-grid item-2">2</div>
+                <div class="item-grid item-3">3</div>
+                <div class="item-grid item-4">4</div>
+                <div class="item-grid item-5">5</div>
+                <div class="item-grid item-6">6</div>
+            </div>
+        </section>
+
+        <!-- Section con DOS clases: 'tarjeta' (estilo global) y 'tienda' (estilo específico) -->
+        <section class="tarjeta tienda">
+            <h2>Productos destacados (con Flex)</h2>
 
             <!-- Contenedor de las cards -->
             <div class="lista-cards lista-cards--flex">
@@ -49,33 +218,14 @@
                     <!-- Precio -->
                     <p class="card-precio">19.99€</p>
 
+                    <!-- Botón -->
                     <a href="#" class="card-boton">Añadir al carrito</a>
                 </article>
 
-            </div>
-        </section>
-        <section class="tarjeta practica-grid">
-            <h2>Práctica de Grid</h2>
-            <div class="contenedor-grid">
-                <div class="item-grid item-1">1</div>
-                <div class="item-grid item-2">2</div>
-                <div class="item-grid item-3">3</div>
-                <div class="item-grid item-4">4</div>
-                <div class="item-grid item-5">5</div>
-                <div class="item-grid item-6">6</div>
-            </div>
-        </section>
-        <!-- Section con DOS clases: 'tarjeta' (estilo general) y 'tienda' (estilo específico) -->
-        <section class="tarjeta tienda">
-            <h2>Productos destacados (grid)</h2>
-
-            <!-- Contenedor de las cards -->
-            <div class="lista-cards lista-cards--grid">
-
-                <!-- Primer producto -->
+                <!-- Segundo producto -->
                 <article class="card">
                     <!-- Imagen -->
-                    <img src="../imagenes/mouse.png" alt="Ratón gaming RGB" class="card-imagen">
+                    <img src="../imagenes/camara.png" alt="Ratón gaming RGB" class="card-imagen">
 
                     <!-- Título del producto -->
                     <h3 class="card-titulo">Ratón Gaming RGB</h3>
@@ -88,39 +238,53 @@
                     <!-- Precio -->
                     <p class="card-precio">19.99€</p>
 
+                    <!-- Botón -->
                     <a href="#" class="card-boton">Añadir al carrito</a>
                 </article>
 
+                <!-- Tercer producto -->
+                <article class="card">
+                    <!-- Imagen -->
+                    <img src="../imagenes/pendrive.png" alt="Ratón gaming RGB" class="card-imagen">
+
+                    <!-- Título del producto -->
+                    <h3 class="card-titulo">Ratón Gaming RGB</h3>
+
+                    <!-- Descripción -->
+                    <p class="card-descripcion">
+                        Ratón ergonómico con 6 botones y sensor de alta precisión.
+                    </p>
+
+                    <!-- Precio -->
+                    <p class="card-precio">19.99€</p>
+
+                    <!-- Botón -->
+                    <a href="#" class="card-boton">Añadir al carrito</a>
+                </article>
+
+                <!-- Cuarto producto -->
+                <article class="card">
+                    <!-- Imagen -->
+                    <img src="../imagenes/teclado.png" alt="Ratón gaming RGB" class="card-imagen">
+
+                    <!-- Título del producto -->
+                    <h3 class="card-titulo">Ratón Gaming RGB</h3>
+
+                    <!-- Descripción -->
+                    <p class="card-descripcion">
+                        Ratón ergonómico con 6 botones y sensor de alta precisión.
+                    </p>
+
+                    <!-- Precio -->
+                    <p class="card-precio">19.99€</p>
+
+                    <!-- Botón -->
+                    <a href="#" class="card-boton">Añadir al carrito</a>
+                </article>
             </div>
         </section>
-
-        <!-- Layout por áreas -->
-        <section class="tarjeta practicas-grid">
-            <h2>Layout por áreas</h2>
-            <div class="contenedor-areas">
-                <header class="area-header">HEADER</header>
-                <nav class="area-menu">MENU</nav>
-                <main class="area-main">MAIN</main>
-                <aside class="area-aside">ASIDE</aside>
-                <footer class="area-footer">FOOTER</footer>
-            </div>
-        </section>
-
-        <section>
-            <div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </section>
-
     </main>
     <footer class="pie">
         <p>&copy; 2025 GameZone. Todos los derechos reservados.</p>
     </footer>
 </body>
-</html>
