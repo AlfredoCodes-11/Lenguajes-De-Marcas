@@ -16,12 +16,29 @@ Configuración general:
 */
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", sans-serif;
+    /*
+      - "Roboto": fuente que hemos traído de Google Fonts
+      - system-ui, -apple-system, etc.: fuentes de sistema de respaldo
+      - sans-serif: último recurso genérico
+    */
     color: #333;
     background: #f0f0f0;
     display: flex;              /* Contenedor flexible */
     flex-direction: column;     /* Disposición vertical de los 3 elementos */
     min-height: 100vh;          /* Altura total del viewport*/
+}
+
+h1, h2 {
+    font-family: "Orbitron", "Roboto", "sans-serif";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-family: "Roboto", system-ui, sans-serif;
+    font-weight:700;
 }
 
 /* Cabecera con FLEX */
@@ -54,6 +71,8 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-family: "Orbitron", "Roboto", "sans-serif";
+    letter-spacing: 0.5px;
 }
 
 /* Efecto hover para los enlaces (pseudoclase) */
@@ -177,6 +196,7 @@ body {
     border-radius: 4px;
     padding: 0.5rem 1rem;
     cursor: pointer;
+    font: inherit;
 }
 
 .form-row button:hover {
@@ -202,16 +222,17 @@ body {
 
 .mapa-contenedor {
     margin-top: 1rem;
-    margin: 0 auto;
 }
 
 .mapa-contenedor iframe {
+    display:block;
     width: 100%;
     max-width: 600px;
-    height: 350px;
-    /*aspect-ratio: 16 / 9;*/
+    /*height: 350px;*/
+    aspect-ratio: 16 / 9;
     border: 0;
     border-radius: 8px;
+    margin: 0 auto;
 }
 
 /* ========================
@@ -464,6 +485,42 @@ body {
     aspect-ratio: 16 / 9;
     border: 0;
     border-radius: 8px;
+}
+
+/* Contenedor principal : menú lateral + contenido en fila */
+.layout-guias .layout-guias-contenido {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+/*Menu lateral*/
+.layout-guias .navega-lateral {
+    background-color: #2C3E50;
+    padding: 1rem 0.5rem;
+    min-width: 220px;
+}
+
+/* Menu en columna solo en la pagina guias*/
+.layout-guias .navega-lateral .menu{
+    flex-direction: column;
+}
+
+.layout-guias .navega-lateral .menu a {
+    display: block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+}
+
+.layout-guias .navega-lateral .menu a:hover {
+    background: #2C3E50;
+    color: #E74C3C;
+}
+
+/* El main se expande para ocupar el resto del espacio */
+.layout-guias #contenido-principal {
+    flex: 1;
+    padding: 1.5rem;
 }
 
 /* VERSION MOVILES */
