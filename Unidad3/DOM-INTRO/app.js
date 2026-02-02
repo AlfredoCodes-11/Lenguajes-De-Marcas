@@ -51,11 +51,11 @@ function cambiarTexto() {
     p.textContent = "¡Hola Mundo!";
 }
 
-const hola = document.querySelector(".btn");
+const btn = document.querySelector(".btn");
 
 /*hola.addEventListener("click", () => {
     const p = document.getElementById("salida");
     p.textContent = "¡Hola Mundo!";
 });*/
 
-hola.addEventListener("click", cambiarTexto);
+btn.addEventListener("click", cambiarTexto);
