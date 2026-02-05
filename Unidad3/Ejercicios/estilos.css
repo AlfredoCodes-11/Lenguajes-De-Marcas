@@ -1,0 +1,40 @@
+#salida{
+    color: brown;
+    font-size: 30px;
+}
+
+#suma{
+    color: aqua;
+}
+
+#resta{
+    background-color: bisque;
+}
+
+#producto{
+    font-weight: bold;
+}
+
+#division{
+    font-style: italic;
+}
+
+#resto{
+    font-style:oblique;
+    font-weight: bold;
+}
+
+.mayor{
+    color: cadetblue;
+    font-weight: bold;
+}
+
+.menor{
+    font-style: italic;
+}
+
+#mes{
+    font-size: 30px;
+    background-color: chartreuse;
+}
+
