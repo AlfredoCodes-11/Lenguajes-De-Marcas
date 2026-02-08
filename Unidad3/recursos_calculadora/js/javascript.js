@@ -3,6 +3,7 @@ let valorActual = "0";          // Lo que se muestra / Lo que estoy escribiendo
 let valorAnterior = null;       //Se usará para guardar el valor tras pulsar +, -, *, /
 let operadorActual = null;      //Se usará cunado metamos operaciones de +, -, *, /
 let resultadoMostrado = false;  //Para saber si el usuario ha pulsado ya el = (más adelante)
+ let decimal =false;
 
 
 //Selecciono los elementos del DOM
@@ -10,6 +11,7 @@ const pantalla = document.getElementById("pantalla");       //Pantalla
 //const botonesNumeros = Array.from(document.querySelectorAll(".numero"));        //Convierto el NodeList en Array
 const botonesNumeros = [...document.querySelectorAll(".numero")];                 //Convierto el NodeList en Array
 //const botonesNumeros = document.getElementsByClassName("numero")
+const botonPunto = document.querySelector(".punto");
 
 //Manejar eventos de click
 // for (let i = 0; i < botonesNumeros.length; i++) {
@@ -26,6 +28,9 @@ botonesNumeros.forEach(boton => {
     });
 });
 
+botonPunto.addEventListener("click", () => {
+    mostrarPuntoPantalla(botonPunto.textContent);
+});
 
 
 /**
@@ -72,9 +77,11 @@ function habilitarPunto(){
 *
 */
 function actualizarPantalla() {
-    pantalla.textContent = valorActual;
+    const max= "9999999999999";
+    if (valorActual.length < max.length){
+        pantalla.textContent = valorActual;
+    }
 }
-
 
 /**
  * @brief Muestra un número en la pantalla gestionando correctamente la entrada.
@@ -110,7 +117,15 @@ function mostrarNumeroPantalla(numero) {
  * Deshabilita el botón de punto para evitar múltiples decimales.
  */
 function mostrarPuntoPantalla() { 
+   
+    if (resultadoMostrado){
+        resultadoMostrado=false;
+    } else if (!decimal){
+        valorActual += botonPunto.textContent;
+        decimal=true;
+    }
 
+    actualizarPantalla();
 }
 
 /**
