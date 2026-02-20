@@ -26,6 +26,7 @@ const claves = Object.keys(carta);
   console.log(carta[claves[i]].texto + carta[claves].emoji);
 }*/
 
+//Rellenar el select
 for (i=0;i<claves.length;i++){
   //1) Creo el elemento <option>
   const opcion = document.createElement("option");
@@ -36,6 +37,27 @@ for (i=0;i<claves.length;i++){
   //4) Insertamos el elemento dentro de select
   selectProducto.appendChild(opcion);
 }
+
+//Rellenar la tabla
+for (let i = 0; i < claves.length; i++) {
+  // Almaceno el valor de cada clave de la carta
+  const producto = carta[claves[i]];
+  // Creo el elemento tr
+  const tr = document.createElement("tr");
+  tr.innerHTML = `
+  <td>${claves[i]}</td>
+  <td>${carta[claves[i]].emoji}</td>
+  <td>${carta[claves[i]].texto}</td>
+  <td>${carta[claves[i]].precio.toFixed(2)}</td>
+  <td>${carta[claves[i]].alergenos.length === 0 ? "N/A": carta[claves[i]].alergenos.join()}</td>
+  `
+
+  // Insertamos el elemento tr
+  tablaMenu.appendChild(tr);
+}
+
+
+  
 
 /*for(const clave of claves){
   console.log(carta[clave].texto + carta[clave].emoji);
