@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Tu Nombre Aquí" />
+        <title>PokéDex</title>
+        <link rel="icon" href="img/favicon.png" />
+        <link rel="stylesheet" href="estilos.css" />
+    </head>
+    <body>
+
+        <header>
+            <div class="header-inner">
+                <span class="logo">PokéDex</span>
+                <nav>
+                    <a href="index.html" class="nav-link nav-activo">Buscador</a>
+                    <a href="lista.html" class="nav-link">Listado</a>
+                    <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="seccion">
+                <h1 class="titulo">Buscador de Pokémon</h1>
+                <p class="subtitulo">Introduce un nombre o número de la Pokédex</p>
+
+                <div class="fila-busqueda">
+                    <input
+                        type="text"
+                        id="inputBusqueda"
+                        class="input-texto"
+                        placeholder="Ej: pikachu, charizard, 25..."
+                    />
+                    <button class="boton-primario" id="btnBuscar">Buscar</button>
+                </div>
+
+                <div class="fila-rapidos">
+                    <span class="etiqueta-gris">Acceso rápido:</span>
+                    <button class="boton-secundario" data-pokemon="pikachu">Pikachu</button>
+                    <button class="boton-secundario" data-pokemon="charizard">Charizard</button>
+                    <button class="boton-secundario" data-pokemon="mewtwo">Mewtwo</button>
+                    <button class="boton-secundario" data-pokemon="eevee">Eevee</button>
+                </div>
+            </section>
+
+            <section class="seccion">
+                <div id="mensajeBuscador" class="mensaje-estado">
+                    Introduce un Pokémon para comenzar.
+                </div>
+
+                <div id="cardPokemon" class="card-pokemon oculto">
+
+                    <div class="card-cabecera">
+                        <span id="numeroPokemon" class="numero-pokedex">#000</span>
+                        <h2 id="nombrePokemon" class="nombre-pokemon">—</h2>
+                        <div id="tiposPokemon" class="fila-tipos"></div>
+                    </div>
+
+                    <div class="card-cuerpo">
+                        <div class="columna-imagen">
+                            <img
+                                id="imagenPokemon"
+                                src=""
+                                alt="Imagen oficial del Pokémon buscado"
+                                class="imagen-pokemon"
+                            />
+                            <table class="tabla-info">
+                                <tbody>
+                                    <tr>
+                                        <th>Altura</th>
+                                        <td id="alturaPokemon">—</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Peso</th>
+                                        <td id="pesoPokemon">—</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Exp. base</th>
+                                        <td id="expPokemon">—</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="columna-datos">
+                            <h3 class="titulo-bloque">Estadísticas base</h3>
+                            <div id="statsPokemon" class="contenedor-stats"></div>
+
+                            <h3 class="titulo-bloque">Habilidades</h3>
+                            <div id="habilidadesPokemon" class="fila-habilidades"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>PokéDex · Proyecto RA04/RA05 · Datos: <a href="https://pokeapi.co" target="_blank">PokéAPI</a></p>
+            <p>Desarrollado por: Tu Nombre Aquí · Ciclo Formativo</p>
+        </footer>
+
+        <script src="javascript.js"></script>
+    </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Alfredo Codes Sánchez">
+        <title>Studio Ghibli</title>
+        <link rel="icon" href="imagenes/favicon.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="estilos.css" />
+    </head>
+    <body>
+
+        <header class="cabecera">
+            <span class="logo">Studio Ghibli</span>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="lista.html">Películas</a></li>
+                    <li><a href="ranking.html">Ranking</a></li>
+                    <li><a href="sobre-mi.html">Sobre mí</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="contenido-principal">
+
+            <div class="tarjeta">
+                <h1>Bienvenido</h1>
+                <p class="aviso">Consulta información sobre las películas del Studio Ghibli</p>
+                <p>Esta web consume datos en tiempo real de la
+                    <a href="https://ghibliapi.vercel.app" target="_blank">Ghibli API</a>.
+                    Usa el menú superior para navegar entre las secciones.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <h2>Resumen</h2>
+                <div id="mensajeResumen" class="mensaje-estado">Cargando datos...</div>
+                <table id="tablaResumen" class="tabla oculto">
+                    <tbody>
+                        <tr>
+                            <th>Total de películas</th>
+                            <td id="totalPeliculas">—</td>
+                        </tr>
+                        <tr>
+                            <th>Película más antigua</th>
+                            <td id="peliculaAntigua">—</td>
+                        </tr>
+                        <tr>
+                            <th>Película más reciente</th>
+                            <td id="peliculaReciente">—</td>
+                        </tr>
+                        <tr>
+                            <th>Mejor puntuación (RT)</th>
+                            <td id="mejorPuntuacion">—</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="tarjeta">
+                <h2>Tops:</h2>
+                <div id="mensajeTop" class="mensaje-estado oculto"></div>
+                <div id="gridTop" class="grid-peliculas oculto"></div>
+            </div>
+
+        </main>
+
+        <footer class="pie">
+            <p>Proyecto evaluación RA03 · Lenguajes de marcas y sistemas de gestión de información</a></p>
+            <p>Proyecto realizado por: Alfredo Codes Sánchez (Declaro que no he usado IA en el proyecto)</p>
+        </footer>
+
+        <script src="ghibli.js"></script>
+    </body>
+</html>

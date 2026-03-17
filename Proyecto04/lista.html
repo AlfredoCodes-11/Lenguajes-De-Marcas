@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Tu Nombre Aquí" />
+        <title>PokéDex · Listado</title>
+        <link rel="icon" href="img/favicon.png" />
+        <link rel="stylesheet" href="estilos.css" />
+    </head>
+    <body>
+
+        <header>
+            <div class="header-inner">
+                <span class="logo">PokéDex</span>
+                <nav>
+                    <a href="index.html" class="nav-link">Buscador</a>
+                    <a href="lista.html" class="nav-link nav-activo">Listado</a>
+                    <a href="sobre-mi.html" class="nav-link">Sobre mí</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="seccion">
+                <h1 class="titulo">Listado de Pokémon</h1>
+                <p class="subtitulo">Explora la Pokédex completa o filtra por tipo</p>
+
+                <div class="fila-filtro">
+                    <label for="selectTipo" class="etiqueta-gris">Filtrar por tipo:</label>
+                    <select id="selectTipo" class="select-tipo">
+                        <option value="">Todos los tipos</option>
+                    </select>
+                    <span id="mensajeEstadoLista" class="etiqueta-gris"></span>
+                </div>
+            </section>
+
+            <section class="seccion">
+                <div id="mensajeLista" class="mensaje-estado">Cargando Pokémon...</div>
+                <div id="listaPokemons" class="grid-pokemons"></div>
+
+                <div class="fila-paginacion">
+                    <button class="boton-primario" id="btnAnterior" disabled>← Anterior</button>
+                    <span id="infoPagina" class="etiqueta-pagina">Página 1</span>
+                    <button class="boton-primario" id="btnSiguiente">Siguiente →</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>PokéDex · Proyecto RA04/RA05 · Datos: <a href="https://pokeapi.co" target="_blank">PokéAPI</a></p>
+            <p>Desarrollado por: Tu Nombre Aquí · Ciclo Formativo</p>
+        </footer>
+
+        <script src="lista.js"></script>
+    </body>
+</html>

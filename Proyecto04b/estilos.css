@@ -1,0 +1,329 @@
+/* Modelo de caja universal */
+* {
+    box-sizing: border-box;
+}
+
+/* Altura completa del documento */
+html, body {
+    height: 100%;
+}
+
+/*
+Configuración general del body:
+- Sin márgenes por defecto
+- Tipografía base Roboto con fuentes de respaldo
+- Color de texto y fondo neutros
+- Flex en columna para que el footer quede siempre abajo
+*/
+body {
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+    color: #333;
+    background: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ======= CABECERA ======= */
+
+/* Cabecera con fondo oscuro y flex para separar logo y menú */
+.cabecera {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #2C3E50;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Menú horizontal con flex */
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Efecto hover en los enlaces del menú */
+.menu a:hover {
+    color: #e74c3c;
+}
+
+/* Enlace activo de la página actual */
+.menu a.activo {
+    color: #e74c3c;
+}
+
+/* ======= CONTENIDO PRINCIPAL ======= */
+
+/*
+El contenido principal crece para empujar el footer hacia abajo.
+Flex en columna con gap entre secciones.
+*/
+#contenido-principal {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/*
+Tarjeta: contenedor blanco con borde, sombra y ancho máximo centrado.
+Usada para agrupar secciones visualmente.
+*/
+.tarjeta {
+    background: #fff;
+    border-radius: 8px;
+    width: min(900px, 95%);
+    margin: 0 auto;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto secundario en gris suave */
+.aviso {
+    color: #7F8C8D;
+    font-size: 0.9rem;
+}
+
+/* ======= TABLAS ======= */
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+/* Bordes y relleno en todas las celdas */
+.tabla th, .tabla td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Cabecera de tabla con fondo oscuro */
+.tabla th {
+    background: #2C3E50;
+    color: #fff;
+    text-align: center;
+}
+
+.tabla td {
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* Filas pares ligeramente distintas para mejorar la lectura */
+.tabla tbody tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+/* ======= BOTONES ======= */
+
+.boton-primario {
+    background-color: #2C3E50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font: inherit;
+    font-weight: bold;
+}
+
+.boton-primario:hover {
+    background-color: #1a252f;
+}
+
+.boton-secundario {
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font: inherit;
+}
+
+.boton-secundario:hover {
+    background-color: #ddd;
+}
+
+/* Fila de botones en horizontal con gap */
+.fila-botones {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+/* ======= MENSAJES DE ESTADO ======= */
+
+/* Mensaje informativo centrado (cargando, sin resultados...) */
+.mensaje-estado {
+    padding: 1rem;
+    text-align: center;
+    color: #7F8C8D;
+}
+
+/* Mensaje de error en rojo */
+.mensaje-error {
+    color: #c0392b;
+    font-weight: bold;
+}
+
+/* Animación de parpadeo para el mensaje de carga */
+.mensaje-cargando {
+    animation: parpadeo 1.2s ease-in-out infinite;
+}
+
+/* Clase para ocultar elementos */
+.oculto {
+    display: none;
+}
+
+/* ======= GRID DE TARJETAS DE PELÍCULA (lista.html) ======= */
+
+/*
+Grid responsivo con auto-fill: crea tantas columnas como quepan,
+con un mínimo de 200px cada una.
+*/
+.grid-peliculas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+/* Card individual de película */
+.card-pelicula {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: entradaCard 0.3s ease-out;
+}
+
+/* Efecto hover: sube ligeramente la card */
+.card-pelicula:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+
+/* Imagen del cartel de la película */
+.card-pelicula img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Zona de texto dentro de la card */
+.card-pelicula-info {
+    padding: 0.7rem;
+}
+
+.card-pelicula-titulo {
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #333;
+}
+
+.card-pelicula-meta {
+    font-size: 0.8rem;
+    color: #7F8C8D;
+    line-height: 1.5;
+}
+
+/* ======= LISTA SIMPLE (sobre-mi.html) ======= */
+
+.lista-simple {
+    padding-left: 20px;
+}
+
+.lista-simple li {
+    margin: 0.5rem 0;
+    color: #7F8C8D;
+}
+
+/* ======= PIE DE PÁGINA ======= */
+
+.pie {
+    text-align: center;
+    padding: 1rem;
+    color: #7F8C8D;
+    background: #2C3E50;
+    font-size: 14px;
+}
+
+.pie a {
+    color: #bdc3c7;
+    text-decoration: none;
+}
+
+.pie a:hover {
+    text-decoration: underline;
+}
+
+/* ======= ANIMACIONES CSS ======= */
+
+/* Aparición suave de las cards al cargarse desde la API */
+@keyframes entradaCard {
+    0% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Parpadeo para el mensaje de carga */
+@keyframes parpadeo {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.4; }
+}
+
+/* ======= RESPONSIVE ======= */
+
+/* Versión móvil */
+@media screen and (width < 768px) {
+    .cabecera {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Una sola columna de cards en móvil */
+    .grid-peliculas {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+/* Versión tablet */
+@media screen and (768px <= width < 1024px) {
+    .tarjeta {
+        width: min(700px, 95%);
+    }
+}

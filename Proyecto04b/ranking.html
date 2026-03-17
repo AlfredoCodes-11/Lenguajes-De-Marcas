@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Alfredo Codes Sánchez">
+        <title>Studio Ghibli · Ranking</title>
+        <link rel="icon" href="imagenes/favicon.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="estilos.css" />
+    </head>
+    <body>
+
+        <header class="cabecera">
+            <span class="logo">Studio Ghibli</span>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="lista.html">Películas</a></li>
+                    <li><a href="ranking.html" class="activo">Ranking</a></li>
+                    <li><a href="sobre-mi.html">Sobre mí</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="contenido-principal">
+
+            <div class="tarjeta">
+                <h1>Ranking por fecha</h1>
+                <p class="aviso">Películas ordenadas de más reciente a más antigua</p>
+                <div class="fila-botones">
+                    <button class="boton-primario" id="btnNuevaAntigua">Más nueva → Más antigua</button>
+                    <button class="boton-secundario" id="btnAntiguaNueva">Más antigua → Más nueva</button>
+                </div>
+            </div>
+
+            <div class="tarjeta">
+                <div id="mensajeRanking" class="mensaje-estado">Cargando ranking...</div>
+                <table id="tablaRanking" class="tabla oculto">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Título</th>
+                            <th>Director</th>
+                            <th>Año</th>
+                            <th>Duración</th>
+                            <th>RT Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoRanking"></tbody>
+                </table>
+            </div>
+
+        </main>
+
+        <footer class="pie">
+            <p>Proyecto evaluación RA03 · Lenguajes de marcas y sistemas de gestión de información</a></p>
+            <p>Proyecto realizado por: Alfredo Codes Sánchez (Declaro que no he usado IA en el proyecto)</p>
+        </footer>
+
+        <script src="ghibli.js"></script>
+    </body>
+</html>

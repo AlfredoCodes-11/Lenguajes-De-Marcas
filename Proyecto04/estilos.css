@@ -1,0 +1,684 @@
+/* ================================================
+   Variables globales
+   ================================================ */
+:root {
+    --color-fondo: #f4f4f4;
+    --color-header: #cc0000;
+    --color-header-texto: #ffffff;
+    --color-card: #ffffff;
+    --color-borde: #dddddd;
+    --color-texto: #222222;
+    --color-texto-suave: #666666;
+    --color-primario: #cc0000;
+    --color-primario-hover: #aa0000;
+    --color-secundario: #f0f0f0;
+    --color-secundario-hover: #e0e0e0;
+    --color-error: #cc0000;
+    --color-link: #0055aa;
+    --radio: 6px;
+    --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --transicion: all 0.2s ease;
+}
+
+/* ================================================
+   Reset y base
+   ================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* ================================================
+   Header
+   ================================================ */
+header {
+    background-color: var(--color-header);
+    color: var(--color-header-texto);
+    padding: 0 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--color-header-texto);
+}
+
+nav {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.nav-link {
+    color: var(--color-header-texto);
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border-radius: var(--radio);
+    font-size: 0.9rem;
+    transition: var(--transicion);
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-activo {
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: bold;
+}
+
+/* ================================================
+   Main y secciones
+   ================================================ */
+main {
+    flex: 1;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.seccion {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    padding: 1.5rem;
+    box-shadow: var(--sombra);
+}
+
+/* ================================================
+   Títulos
+   ================================================ */
+.titulo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    color: var(--color-texto);
+}
+
+.subtitulo {
+    font-size: 0.9rem;
+    color: var(--color-texto-suave);
+    margin-bottom: 1.2rem;
+}
+
+.titulo-bloque {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-texto-suave);
+    margin-bottom: 0.8rem;
+    margin-top: 1.2rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.titulo-bloque:first-child {
+    margin-top: 0;
+}
+
+/* ================================================
+   Botones
+   ================================================ */
+.boton-primario {
+    padding: 0.5rem 1.2rem;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radio);
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.boton-primario:hover:not(:disabled) {
+    background-color: var(--color-primario-hover);
+    transform: translateY(-1px);
+}
+
+.boton-primario:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.boton-primario:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.boton-secundario {
+    padding: 0.4rem 0.9rem;
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.boton-secundario:hover {
+    background-color: var(--color-secundario-hover);
+    border-color: #aaaaaa;
+}
+
+/* ================================================
+   Buscador (index.html)
+   ================================================ */
+.fila-busqueda {
+    display: flex;
+    gap: 0.6rem;
+    margin-bottom: 0.8rem;
+    max-width: 560px;
+}
+
+.input-texto {
+    flex: 1;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    font-size: 0.9rem;
+    font-family: Arial, sans-serif;
+    color: var(--color-texto);
+    transition: var(--transicion);
+    outline: none;
+}
+
+.input-texto:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 2px rgba(204, 0, 0, 0.15);
+}
+
+.fila-rapidos {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.etiqueta-gris {
+    font-size: 0.85rem;
+    color: var(--color-texto-suave);
+}
+
+/* ================================================
+   Mensajes de estado
+   ================================================ */
+.mensaje-estado {
+    padding: 1rem;
+    text-align: center;
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+}
+
+.mensaje-error {
+    color: var(--color-error);
+    font-weight: bold;
+}
+
+.oculto {
+    display: none;
+}
+
+/* ================================================
+   Card de Pokémon (index.html)
+   ================================================ */
+.card-pokemon {
+    animation: entradaCard 0.3s ease-out;
+}
+
+.card-cabecera {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-borde);
+    flex-wrap: wrap;
+}
+
+.numero-pokedex {
+    font-size: 0.85rem;
+    color: var(--color-texto-suave);
+    font-family: monospace;
+}
+
+.nombre-pokemon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--color-texto);
+}
+
+.fila-tipos {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.badge-tipo {
+    padding: 0.2rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+}
+
+.card-cuerpo {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.columna-imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-width: 180px;
+}
+
+.imagen-pokemon {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    animation: flotar 3s ease-in-out infinite;
+}
+
+/* Tabla de info (altura, peso, exp) */
+.tabla-info {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.tabla-info th,
+.tabla-info td {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--color-borde);
+    text-align: left;
+}
+
+.tabla-info th {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-suave);
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.columna-datos {
+    flex: 1;
+    min-width: 260px;
+}
+
+/* Stats */
+.contenedor-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.fila-stat {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+}
+
+.nombre-stat {
+    width: 90px;
+    color: var(--color-texto-suave);
+    font-size: 0.8rem;
+    text-transform: capitalize;
+}
+
+.valor-stat {
+    width: 30px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.barra-fondo {
+    flex: 1;
+    height: 7px;
+    background-color: var(--color-borde);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.barra-relleno {
+    height: 100%;
+    background-color: var(--color-primario);
+    border-radius: 4px;
+    transition: width 0.6s ease-out;
+}
+
+/* Habilidades */
+.fila-habilidades {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+}
+
+.badge-habilidad {
+    padding: 0.3rem 0.7rem;
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    font-size: 0.8rem;
+    text-transform: capitalize;
+    color: var(--color-texto);
+}
+
+/* ================================================
+   Listado (lista.html)
+   ================================================ */
+.fila-filtro {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+.select-tipo {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    font-size: 0.85rem;
+    font-family: Arial, sans-serif;
+    color: var(--color-texto);
+    background-color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    transition: var(--transicion);
+}
+
+.select-tipo:focus {
+    border-color: var(--color-primario);
+}
+
+.grid-pokemons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.mini-card {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    text-align: center;
+    transition: var(--transicion);
+    animation: entradaCard 0.25s ease-out;
+}
+
+.mini-card:hover {
+    border-color: var(--color-primario);
+    box-shadow: 0 4px 12px rgba(204, 0, 0, 0.12);
+    transform: translateY(-3px);
+}
+
+.mini-card-numero {
+    font-size: 0.7rem;
+    color: var(--color-texto-suave);
+    font-family: monospace;
+}
+
+.mini-card-imagen {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    transition: var(--transicion);
+}
+
+.mini-card:hover .mini-card-imagen {
+    transform: scale(1.1);
+}
+
+.mini-card-nombre {
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--color-texto);
+}
+
+.mini-card-tipos {
+    display: flex;
+    gap: 0.3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mini-badge-tipo {
+    padding: 0.15rem 0.5rem;
+    border-radius: 20px;
+    font-size: 0.65rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    border: 1px solid transparent;
+}
+
+/* Paginación */
+.fila-paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+.etiqueta-pagina {
+    font-size: 0.85rem;
+    color: var(--color-texto-suave);
+}
+
+/* ================================================
+   Sobre mí (sobre-mi.html)
+   ================================================ */
+.card-sobre-mi {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.tabla-sobre-mi {
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    min-width: 360px;
+}
+
+.tabla-sobre-mi th,
+.tabla-sobre-mi td {
+    padding: 0.6rem 0.9rem;
+    border: 1px solid var(--color-borde);
+    text-align: left;
+    vertical-align: top;
+}
+
+.tabla-sobre-mi th {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-suave);
+    font-weight: bold;
+    white-space: nowrap;
+    width: 160px;
+}
+
+.bloque-proyecto {
+    flex: 1;
+    min-width: 260px;
+}
+
+.texto-parrafo {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: var(--color-texto-suave);
+    margin-bottom: 0.8rem;
+}
+
+.texto-parrafo strong {
+    color: var(--color-texto);
+}
+
+.lista-tecnologias {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.lista-tecnologias li {
+    font-size: 0.9rem;
+    color: var(--color-texto-suave);
+    padding-left: 1rem;
+    position: relative;
+}
+
+.lista-tecnologias li::before {
+    content: "·";
+    position: absolute;
+    left: 0;
+    color: var(--color-primario);
+    font-weight: bold;
+}
+
+/* ================================================
+   Colores por tipo de Pokémon
+   ================================================ */
+.tipo-fire       { background-color: #ffddcc; border-color: #ff9966; color: #993300; }
+.tipo-water      { background-color: #cce5ff; border-color: #66aaff; color: #003399; }
+.tipo-grass      { background-color: #d4edda; border-color: #66bb6a; color: #1b5e20; }
+.tipo-electric   { background-color: #fff9c4; border-color: #ffee58; color: #7a6100; }
+.tipo-psychic    { background-color: #fce4ec; border-color: #f48fb1; color: #880e4f; }
+.tipo-ice        { background-color: #e0f7fa; border-color: #80deea; color: #006064; }
+.tipo-dragon     { background-color: #ede7f6; border-color: #9575cd; color: #311b92; }
+.tipo-dark       { background-color: #eceff1; border-color: #90a4ae; color: #263238; }
+.tipo-fairy      { background-color: #fce4ec; border-color: #f48fb1; color: #880e4f; }
+.tipo-normal     { background-color: #f5f5f5; border-color: #bdbdbd; color: #424242; }
+.tipo-fighting   { background-color: #fbe9e7; border-color: #ff8a65; color: #bf360c; }
+.tipo-flying     { background-color: #e8f5e9; border-color: #80cbc4; color: #004d40; }
+.tipo-poison     { background-color: #f3e5f5; border-color: #ce93d8; color: #4a148c; }
+.tipo-ground     { background-color: #efebe9; border-color: #bcaaa4; color: #4e342e; }
+.tipo-rock       { background-color: #fafafa; border-color: #a1887f; color: #4e342e; }
+.tipo-bug        { background-color: #f9fbe7; border-color: #aed581; color: #33691e; }
+.tipo-ghost      { background-color: #ede7f6; border-color: #9575cd; color: #311b92; }
+.tipo-steel      { background-color: #eceff1; border-color: #b0bec5; color: #37474f; }
+
+/* ================================================
+   Footer
+   ================================================ */
+footer {
+    background-color: #333333;
+    color: #aaaaaa;
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 0.8rem;
+    line-height: 1.8;
+}
+
+footer a {
+    color: #cccccc;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ================================================
+   Animaciones
+   ================================================ */
+@keyframes entradaCard {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes flotar {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-8px); }
+}
+
+/* ================================================
+   Responsive
+   ================================================ */
+@media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        height: auto;
+        padding: 0.8rem 0;
+        gap: 0.6rem;
+    }
+
+    .card-cuerpo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .columna-datos {
+        width: 100%;
+    }
+
+    .card-sobre-mi {
+        flex-direction: column;
+    }
+
+    .tabla-sobre-mi {
+        min-width: unset;
+        width: 100%;
+    }
+
+    .fila-busqueda {
+        max-width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 1rem;
+    }
+
+    .grid-pokemons {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+}
