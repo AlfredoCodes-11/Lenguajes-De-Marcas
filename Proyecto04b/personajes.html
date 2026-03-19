@@ -3,77 +3,76 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="author" content="Alfredo Codes Sánchez">
-        <title>Studio Ghibli</title>
+        <meta name="author" content="Alfredo Codes Sánchez" />
+        <title>Studio Ghibli · Personajes</title>
         <link rel="icon" href="imagenes/favicon.png" />
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="estilos.css" />
     </head>
     <body>
-
+ 
         <header class="cabecera">
             <img src="imagenes/Totoro.gif" alt="Totoro andando" class="gif">
             <span class="logo">Studio Ghibli</span>
-
             <nav>
                 <ul class="menu">
-                    <li><a href="index.html" class="activo">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="lista.html">Películas</a></li>
                     <li><a href="ranking.html">Ranking</a></li>
-                    <li><a href="personajes.html">Personajes</a></li>
+                    <li><a href="personajes.html" class="activo">Personajes</a></li>
                     <li><a href="sobre-mi.html">Sobre mí</a></li>
                 </ul>
             </nav>
         </header>
-
+ 
         <main id="contenido-principal">
-
+ 
             <div class="tarjeta">
-                <h1>Bienvenido</h1>
-                <p class="aviso">Consulta información sobre las películas del Studio Ghibli</p>
-                <p>En esta web podrás ver la lista de películas o un ranking de 
-                   más antigua a más nueva y viceversa para poder verlas en orden cronológico.
-                </p>
+                <h1>Personajes</h1>
+                <p class="aviso">Haz click en un personaje para ver su información (La información aparecerá arriba)</p>
             </div>
-
-            <div class="tarjeta">
-                <h2>Resumen</h2>
-                <div id="mensajeResumen" class="mensaje-estado">Cargando datos...</div>
-                <table id="tablaResumen" class="tabla oculto">
+ 
+            <!-- Panel de detalle: aparece al hacer click en un personaje -->
+            <div class="tarjeta oculto" id="panelDetalle">
+                <h2 id="detalleNombre">—</h2>
+                <table class="tabla" id="tablaDetalle">
                     <tbody>
                         <tr>
-                            <th>Total de películas</th>
-                            <td id="totalPeliculas">—</td>
+                            <th>Película</th>
+                            <td id="detallePelicula">—</td>
                         </tr>
                         <tr>
-                            <th>Película más antigua</th>
-                            <td id="peliculaAntigua">—</td>
+                            <th>Género</th>
+                            <td id="detalleGenero">—</td>
                         </tr>
                         <tr>
-                            <th>Película más reciente</th>
-                            <td id="peliculaReciente">—</td>
+                            <th>Edad</th>
+                            <td id="detalleEdad">—</td>
                         </tr>
                         <tr>
-                            <th>Mejor puntuación (RT)</th>
-                            <td id="mejorPuntuacion">—</td>
+                            <th>Color de ojos</th>
+                            <td id="detalleOjos">—</td>
+                        </tr>
+                        <tr>
+                            <th>Color de pelo</th>
+                            <td id="detallePelo">—</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
+ 
             <div class="tarjeta">
-                <h2>Tops:</h2>
-                <div id="mensajeTop" class="mensaje-estado oculto"></div>
-                <div id="gridTop" class="grid-peliculas oculto"></div>
+                <div id="mensajePersonajes" class="mensaje-estado">Cargando personajes...</div>
+                <div id="listaPersonajes" class="grid-personajes"></div>
             </div>
-
+ 
         </main>
-
+ 
         <footer class="pie">
             <p>Proyecto evaluación RA03 · Lenguajes de marcas y sistemas de gestión de información</a></p>
             <p>Proyecto realizado por: Alfredo Codes Sánchez (Declaro que no he usado IA en el proyecto)</p>
         </footer>
-
-        <script src="./js/javascript.js"></script>
+ 
+        <script src="js/javascript.js"></script>
     </body>
 </html>

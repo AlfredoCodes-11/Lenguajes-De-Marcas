@@ -10,10 +10,6 @@ html, body {
 
 /*
 Configuración general del body:
-- Sin márgenes por defecto
-- Tipografía base Roboto con fuentes de respaldo
-- Color de texto y fondo neutros
-- Flex en columna para que el footer quede siempre abajo
 */
 body {
     margin: 0;
@@ -27,19 +23,25 @@ body {
 
 /* ======= CABECERA ======= */
 
-/* Cabecera con fondo oscuro y flex para separar logo y menú */
+
 .cabecera {
-    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #2C3E50;
+    background: rgb(202, 196, 170);
+
+}
+
+.gif {
+    margin-left: 5px;
+    height: 75px;
 }
 
 .logo {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #fff;
+    color: #332e46;
+    text-align: center;
 }
 
 /* Menú horizontal con flex */
@@ -48,11 +50,11 @@ body {
     display: flex;
     gap: 1rem;
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 .menu a {
-    color: #fff;
+    color: #332e46;
     text-decoration: none;
     font-weight: bold;
 }
@@ -117,8 +119,8 @@ Usada para agrupar secciones visualmente.
 
 /* Cabecera de tabla con fondo oscuro */
 .tabla th {
-    background: #2C3E50;
-    color: #fff;
+    background: rgb(202, 196, 170);
+    color: #332e46;
     text-align: center;
 }
 
@@ -127,10 +129,7 @@ Usada para agrupar secciones visualmente.
     white-space: nowrap;
 }
 
-/* Filas pares ligeramente distintas para mejorar la lectura */
-.tabla tbody tr:nth-child(even) td {
-    background-color: #f9f9f9;
-}
+
 
 /* ======= BOTONES ======= */
 
@@ -250,24 +249,62 @@ con un mínimo de 200px cada una.
     line-height: 1.5;
 }
 
-/* ======= LISTA SIMPLE (sobre-mi.html) ======= */
 
-.lista-simple {
-    padding-left: 20px;
+/* ======= GRID DE PERSONAJES (personajes.html) ======= */
+
+.grid-personajes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
 }
-
-.lista-simple li {
-    margin: 0.5rem 0;
+ 
+/* Card individual de personaje — clicable */
+.card-personaje {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.8rem;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: entradaCard 0.3s ease-out;
+}
+ 
+/* Efecto hover para indicar que es clicable */
+.card-personaje:hover {
+    border-color: #2C3E50;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+}
+ 
+.card-personaje-nombre {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.3rem;
+}
+ 
+.card-personaje-edad {
+    font-size: 0.8rem;
     color: #7F8C8D;
 }
+
+/* ======= LISTA SIMPLE (sobre-mi.html) ======= */
+
+.pfinal {
+    padding-left: 20px;
+    color: #7F8C8D;
+}
+
 
 /* ======= PIE DE PÁGINA ======= */
 
 .pie {
     text-align: center;
     padding: 1rem;
-    color: #7F8C8D;
-    background: #2C3E50;
+    color: #332e46;
+    font-weight: bold;
+    background: rgb(202, 196, 170);
     font-size: 14px;
 }
 
