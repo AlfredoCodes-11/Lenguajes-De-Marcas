@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    color: #222;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Vídeo de fondo */
+.video-fondo {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Capa para mejorar lectura */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.68);
+    z-index: -1;
+}
+
+header,
+footer {
+    height: 60px;
+}
+
+.contenedor-principal {
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.card-personaje {
+    position: relative;
+    width: 100%;
+    max-width: 980px;
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 2rem;
+    background-color: rgba(255, 248, 220, 0.97);
+    border: 4px solid #d9a404;
+    border-radius: 24px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+    padding: 2rem;
+}
+
+.icono-card {
+    position: absolute;
+    top: -18px;
+    left: -18px;
+    width: 70px;
+    height: 70px;
+    background-color: #ffd54f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
+    border: 3px solid #d9a404;
+}
+
+.icono-card img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.imagen-personaje-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 245, 200, 0.9);
+    border-radius: 18px;
+    padding: 1rem;
+    min-height: 460px;
+    overflow: hidden;
+}
+
+.imagen-personaje-contenedor img {
+    width: 100%;
+    max-width: 260px;
+    max-height: 420px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.imagen-personaje-contenedor img:hover {
+    transform: scale(1.06) rotate(-1deg);
+    filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.25));
+}
+
+.contenido-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    justify-content: center;
+}
+
+.contenido-card h1 {
+    font-size: 2rem;
+    color: #16396b;
+    text-align: center;
+    margin-bottom: 0.4rem;
+}
+
+.badges-personaje {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.3rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 110px;
+    padding: 0.55rem 1rem;
+    border-radius: 999px;
+    font-weight: bold;
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.badge-edad {
+    background-color: #f7f7f7;
+    color: #222;
+}
+
+.badge-estado {
+    background-color: #f7f7f7;
+    color: #222;
+}
+
+.badge-estado.vivo {
+    background-color: #e7f6ec;
+    color: #1e8e3e;
+    border-color: #c8e6d0;
+}
+
+.badge-estado.fallecido {
+    background-color: #fbe9e7;
+    color: #c62828;
+    border-color: #f3c2bd;
+}
+
+.texto-info {
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.descripcion-box,
+.frases-box {
+    background-color: #fffef5;
+    border-left: 6px solid #ff6f00;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.descripcion-box h2,
+.frases-box h2 {
+    font-size: 1.2rem;
+    color: #b23c17;
+    margin-bottom: 0.5rem;
+}
+
+.descripcion-box {
+    height: 140px;
+    overflow-y: auto;
+}
+
+.frases-box {
+    height: 140px;
+    overflow-y: auto;
+    background-color: #fffef5;
+    border-left: 6px solid #ff6f00;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.frases-box ul {
+    padding-left: 1.2rem;
+}
+
+.frases-box li {
+    line-height: 1.5;
+    margin-bottom: 0.45rem;
+}
+
+.frase-vacia {
+    list-style: none;
+    padding-left: 0;
+    margin-left: -1.2rem;
+    color: #555;
+    font-style: italic;
+}
+
+
+.descripcion-box p,
+.frases-box p {
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.contador-personaje {
+    margin-top: 0.4rem;
+    font-weight: bold;
+    text-align: center;
+    color: #16396b;
+    font-size: 1.05rem;
+}
+
+.botones-navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 0.6rem;
+}
+
+.botones-navegacion button {
+    border: 2px solid #d9a404;
+    background: linear-gradient(180deg, #e53935, #c62828);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.botones-navegacion button:hover {
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.25);
+    background: linear-gradient(180deg, #ef5350, #b71c1c);
+}
+
+.botones-navegacion button:active {
+    transform: translateY(0);
+}
+
+.botones-navegacion button:disabled {
+    background: #999;
+    border-color: #777;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+@media (max-width: 900px) {
+    .card-personaje {
+        grid-template-columns: 1fr;
+    }
+
+    .imagen-personaje-contenedor {
+        min-height: 320px;
+    }
+
+    .contenido-card h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .contenedor-principal {
+        padding: 1rem;
+    }
+
+    .card-personaje {
+        padding: 1.2rem;
+    }
+
+    .contenido-card h1 {
+        font-size: 1.6rem;
+    }
+
+    .texto-info,
+    .descripcion-box p,
+    .frases-box p,
+    .contador-personaje {
+        font-size: 0.98rem;
+    }
+
+    .botones-navegacion button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Defensa proyecto Unidad 04 LMSGI">
+    <meta name="author" content="Sergio Sánchez Martín">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defensa proyecto Unidad 04 LMSGI</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="shortcut icon" href="/img/donut.png" type="image/png">
+</head>
+<body>
+    <video class="video-fondo" autoplay muted loop>
+        <source src="/img/intro.mp4" type="video/mp4">
+    </video>
+
+    <header></header>
+
+    <main class="contenedor-principal">
+        <section class="card-personaje">
+            <div class="icono-card">
+                <img src="/img/donut.png" alt="Icono decorativo">
+            </div>
+
+            <div class="imagen-personaje-contenedor">
+                <img id="imagenPersonaje" alt="Imagen del personaje" loading="lazy">
+            </div>
+
+            <div class="contenido-card">
+                <h1 id="nombrePersonaje">Cargando personaje...</h1>
+                <div class="badges-personaje">
+                    <span id="edadPersonaje" class="badge badge-estado">Edad: -</span>
+                    <span id="estadoPersonaje" class="badge badge-estado">-</span>
+                </div>
+
+                <p class="texto-info"><strong>Género:</strong> <span id="generoPersonaje">-</span></p>
+                <p class="texto-info"><strong>Ocupación:</strong> <span id="ocupacionPersonaje">-</span></p>
+
+                <div class="descripcion-box">
+                    <h2>Descripción</h2>
+                    <p id="descripcionPersonaje">Cargando descripción...</p>
+                </div>
+
+                <div class="frases-box">
+                    <h2>Frases</h2>
+                    <ul id="frasesPersonaje">
+                        <li>Cargando frases...</li>
+                    </ul>
+                </div>
+
+                <p id="contadorPersonaje" class="contador-personaje">Personaje 1 de ?</p>
+
+                <div class="botones-navegacion">
+                    <button id="btnPrimero" type="button">Primero</button>
+                    <button id="btnAnterior" type="button">Anterior</button>
+                    <button id="btnSiguiente" type="button">Siguiente</button>
+                    <button id="btnUltimo" type="button">Último</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script src="./js/javascript.js"></script>
+</body>
+</html>
