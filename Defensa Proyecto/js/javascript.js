@@ -92,17 +92,9 @@ function obtenerPersonajePorId(id) {
             return reponse.json();
         })
         .then(personaje => {
-            nombrePersonaje.textContent = personaje.name;
-            edadPersonaje.textContent = "Edad: "+personaje.age;
-            estadoPersonaje.textContent = personaje.status;
-            generoPersonaje.textContent = personaje.gender;
-            ocupacionPersonaje.textContent = personaje.occupation;
-            descripcionPersonaje.textContent = personaje.description;
-            pintarFrases(personaje.phrases);
-            imagenPersonaje.src = URL_CDN_500 + personaje.portrait_path;
-            imagenPersonaje.alt = personaje.name
-                ? "Imagen de " + personaje.name: "Imagen del personaje"
-            contadorPersonaje.textContent = "Personaje " + idActual + " de " + totalPersonajes;
+
+            pintarPersonaje(personaje);
+            
         })
 }
 
@@ -126,4 +118,54 @@ function cargarTotalPersonajes(){
 
 function pintarFrases(frases){
     frasesPersonaje.innerHTML="";
+
+    if (Array.isArray(frases) && frases.length > 0) {
+        frases.forEach(fr => {
+            const item = document.createElement("li");
+            item.textContent = fr;
+            frasesPersonaje.appendChild(item);
+        })
+    }
+}
+
+function pintarPersonaje(personaje){
+    nombrePersonaje.textContent = personaje.name || "Nombre no dispobible";
+    if (personaje.age === null) {
+        edadPersonaje.textContent = "Edad no disponible";
+    } else {
+        edadPersonaje.textContent = "Edad: "+ personaje.age;
+    }
+    estadoPersonaje.textContent = personaje.status;
+    estadoPersonaje.classList.remove("fallecido");
+    estadoPersonaje.classList.remove("vivo");
+    estadoPersonaje.classList.remove("unnownk");
+    if(personaje.status === "Alive"){
+        estadoPersonaje.classList.add("vivo");
+    } else if (personaje.status === "Deceased") {
+        estadoPersonaje.classList.add("fallecido");
+    } else {
+        estadoPersonaje.textContent = "Estado no disponible";
+        estadoPersonaje.classList.add("unnownk");
+    }
+    generoPersonaje.textContent = personaje.gender;
+    ocupacionPersonaje.textContent = personaje.occupation;
+    descripcionPersonaje.textContent = personaje.description;
+    pintarFrases(personaje.phrases);
+    imagenPersonaje.src = URL_CDN_500 + personaje.portrait_path;
+
+    imagenPersonaje.alt = personaje.name
+        ? "Imagen de " + personaje.name: "Imagen del personaje";
+
+    contadorPersonaje.textContent = "Personaje " + idActual + " de " + totalPersonajes;
+
+    actualizarBotones();
+    
+}
+
+function actualizarBotones() {
+    // Actualizo los botones
+    btnPrimero.disabled = idActual === 1;
+    btnAnterior.disabled = idActual === 1;
+    btnSiguiente.disabled = idActual === totalPersonajes;
+    btnUltimo.disabled = idActual === totalPersonajes;
 }

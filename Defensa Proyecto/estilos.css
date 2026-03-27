@@ -156,6 +156,12 @@ footer {
     border-color: #c8e6d0;
 }
 
+.badge-estado.unnownk {
+    background-color: #f5eb64;
+    color: #000000;
+    border-color: #f3ef00;
+}
+
 .badge-estado.fallecido {
     background-color: #fbe9e7;
     color: #c62828;
